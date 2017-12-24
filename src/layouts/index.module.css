@@ -6,9 +6,10 @@
 .header {
     color: white;
     font-size: xx-large;
-    margin: 2rem auto 1rem auto;
+    margin: 2ex auto 1ex auto;
     display: block;
     line-height: initial;
+    padding: 0 1ex 0 1ex;
 }
 
 .bottom {
