@@ -7,8 +7,8 @@ lawtonTheme.overrideThemeStyles = () => ({
     'body': {
         backgroundImage: 'url(' + background +')',
         backgroundRepeat: 'no-repeat',
-        backgroundSize: '100% auto',
-        backgroundColor: 'rgb(77, 127, 149)',
+        backgroundPosition: 'top',
+        backgroundColor: 'rgb(87, 127, 152)',
     }
 });
 
