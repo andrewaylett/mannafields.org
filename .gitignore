@@ -57,6 +57,8 @@ typings/
 # dotenv environment variables file
 .env
 
+.idea
+
 .cache/
 public
 yarn-error.log
