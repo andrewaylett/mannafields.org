@@ -1,6 +1,9 @@
 ---
 title: About
 slug: about
+icon: school
+subheader: true
+index: 10
 ---
 
 # Thoroughly Preparing the Next Generation

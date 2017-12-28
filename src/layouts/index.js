@@ -18,8 +18,32 @@ import 'react-md/src/scss/_react-md.scss'
 import 'react-md/dist/react-md.blue-light_blue.min.css'
 import 'react-md/src/scss/_typography.scss'
 
-const getNavList = () => {
-    return [
+function getPageData(query) {
+    const thisPageSlug = query.file.relativePath;
+
+    switch (thisPageSlug) {
+        case '/':
+            return {
+                frontmatter: {
+                    title: "Home"
+                },
+                fields: {
+                    slug: '/'
+                }
+            };
+
+        default:
+            for (let node of query.allMarkdownRemark.edges) {
+                if (node.fields.slug === thisPageSlug) {
+                    return node;
+                }
+            }
+            throw "Didn't find page in collection";
+    }
+}
+
+function getNavList(query) {
+    const result = [
         {
             primaryText: "Home",
             leftIcon: <FontIcon>home</FontIcon>,
@@ -29,14 +53,26 @@ const getNavList = () => {
         {
             divider: true
         },
-        {
-            primaryText: 'About',
-            leftIcon: <FontIcon>school</FontIcon>,
-            component: Link,
-            to: '/about/'
-        }
     ];
-};
+
+    for (let node of query.allMarkdownRemark.edges) {
+        node = node.node;
+        let pageDetails = {
+            primaryText: node.frontmatter.title,
+            component: Link,
+            to: node.fields.slug,
+        };
+        if (node.frontmatter.icon) {
+            pageDetails.leftIcon = <FontIcon>{node.frontmatter.icon}</FontIcon>;
+        }
+        if (node.frontmatter.subheader) {
+            pageDetails.subheader = true;
+        }
+        result.push(pageDetails);
+    }
+
+    return result;
+}
 
 class ChipLink extends React.Component {
 
@@ -113,16 +149,16 @@ const FooterCardThree = ()=>(
     </Card>
 );
 
-export default ({children}) => (
+export default ({children, data}) => (
     <div className={module.everything}>
         <NavigationDrawer
             drawerTitle='Mannafields'
             toolbarTitle='Mannafields Christian School'
             contentClassName="main-content"
-            navItems={getNavList()}
+            navItems={getNavList(data)}
             mobileDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY}
-            tabletDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY_MINI}
-            desktopDrawerType={NavigationDrawer.DrawerTypes.PERSISTENT_MINI}
+            tabletDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY}
+            desktopDrawerType={NavigationDrawer.DrawerTypes.FULL_HEIGHT}
         >
             <div className={module.wrapper}>
                 {children()}
@@ -141,3 +177,28 @@ export default ({children}) => (
         </NavigationDrawer>
     </div>
 );
+
+export const query = graphql`
+    query LayoutQuery {
+        file {
+            relativePath
+        }
+        allMarkdownRemark(
+            sort: { order: ASC, fields: [frontmatter___index] }
+        ) {
+            edges {
+                node {
+                    frontmatter {
+                        title
+                        icon
+                        subheader
+                        index
+                    }
+                    fields {
+                        slug
+                    }
+                }
+            }
+        }
+    }
+`;
