@@ -34,6 +34,7 @@ function getPageData(query) {
 
         default:
             for (let node of query.allMarkdownRemark.edges) {
+                node = node.node;
                 if (node.fields.slug === thisPageSlug) {
                     return node;
                 }
@@ -149,8 +150,9 @@ const FooterCardThree = ()=>(
     </Card>
 );
 
-export default ({children, data}) => (
-    <div className={module.everything}>
+export default ({children, data}) => {
+    // const pageData = getPageData(data);
+    return <div className={module.everything}>
         <NavigationDrawer
             drawerTitle='Mannafields'
             toolbarTitle='Mannafields Christian School'
@@ -176,7 +178,7 @@ export default ({children, data}) => (
             </div>
         </NavigationDrawer>
     </div>
-);
+};
 
 export const query = graphql`
     query LayoutQuery {

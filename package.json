@@ -17,6 +17,7 @@
     "gatsby-transformer-remark": "^1.7.26",
     "mdi-react": "^2.1.19",
     "react-burger-menu": "^2.1.11",
+    "react-helmet": "^5.2.0",
     "react-md": "^1.2.9",
     "typography-theme-lawton": "^0.15.10"
   }

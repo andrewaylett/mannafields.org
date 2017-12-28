@@ -1,4 +1,5 @@
 import React from "react";
+import Helmet from 'react-helmet';
 
 import Link from 'gatsby-link';
 
@@ -7,6 +8,9 @@ import {Grid, Cell} from 'react-md/lib/Grids';
 
 export default () => (
     <Card>
+        <Helmet>
+            <title>Mannafields Christian School</title>
+        </Helmet>
         <Grid>
             <Card className={Cell.getClassName({size: 4})}>
                 <CardTitle title='Recent News'/>
