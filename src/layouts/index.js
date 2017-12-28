@@ -56,6 +56,63 @@ class ChipLink extends React.Component {
     }
 }
 
+const FooterCardOne = ()=>(
+    <Card className={Cell.getClassName({size: 4})}>
+        <CardTitle title='Get In Touch'/>
+        <CardText className={module.chipBlock}>
+            <ChipLink to='phone:+441316595602' avatar={<Avatar icon={<FontIcon>phone</FontIcon>}/>}
+                      label='(+44) 131 659 5602'/>
+            <ChipLink to='email:info@mannafields.org'
+                      avatar={<Avatar icon={<FontIcon>email</FontIcon>}/>}
+                      label='info@mannafields.org'/>
+            <ChipLink to='https://www.facebook.com/MannafieldsChristianSchool'
+                      avatar={<Avatar icon={<FacebookBoxIcon className={module.icon}/>}/>}
+                      label='Facebook'/>
+            <ChipLink to='https://twitter.com/mannafields'
+                      avatar={<Avatar icon={<TwitterBoxIcon className={module.icon}/>}/>}
+                      label='@mannafields'/>
+        </CardText>
+    </Card>
+);
+
+const FooterCardTwo = ()=>(
+    <Card className={Cell.getClassName({size: 4})}>
+        <CardTitle title='Footer Block Two'/>
+        <CardText>
+            <ChipLink to='phone:+441316595602' avatar={<Avatar icon={<FontIcon>phone</FontIcon>}/>}
+                      label='(+44) 131 659 5602'/>
+            <ChipLink to='email:info@mannafields.org'
+                      avatar={<Avatar icon={<FontIcon>email</FontIcon>}/>}
+                      label='info@mannafields.org'/>
+            <ChipLink to='https://www.facebook.com/MannafieldsChristianSchool'
+                      avatar={<Avatar icon={<FacebookBoxIcon className={module.icon}/>}/>}
+                      label='Facebook'/>
+            <ChipLink to='https://twitter.com/mannafields'
+                      avatar={<Avatar icon={<TwitterBoxIcon className={module.icon}/>}/>}
+                      label='@mannafields'/>
+        </CardText>
+    </Card>
+);
+
+const FooterCardThree = ()=>(
+    <Card className={Cell.getClassName({size: 4})}>
+        <CardTitle title='Footer Block Two'/>
+        <CardText>
+            <ChipLink to='phone:+441316595602' avatar={<Avatar icon={<FontIcon>phone</FontIcon>}/>}
+                      label='(+44) 131 659 5602'/>
+            <ChipLink to='email:info@mannafields.org'
+                      avatar={<Avatar icon={<FontIcon>email</FontIcon>}/>}
+                      label='info@mannafields.org'/>
+            <ChipLink to='https://www.facebook.com/MannafieldsChristianSchool'
+                      avatar={<Avatar icon={<FacebookBoxIcon className={module.icon}/>}/>}
+                      label='Facebook'/>
+            <ChipLink to='https://twitter.com/mannafields'
+                      avatar={<Avatar icon={<TwitterBoxIcon className={module.icon}/>}/>}
+                      label='@mannafields'/>
+        </CardText>
+    </Card>
+);
+
 export default ({children}) => (
     <div className={module.everything}>
         <NavigationDrawer
@@ -71,54 +128,9 @@ export default ({children}) => (
                 {children()}
                 <div className={module.main}>
                     <Grid>
-                        <Card className={Cell.getClassName({size: 4})}>
-                            <CardTitle title='Get In Touch'/>
-                            <CardText className={module.chipBlock}>
-                                <ChipLink to='phone:+441316595602' avatar={<Avatar icon={<FontIcon>phone</FontIcon>}/>}
-                                          label='(+44) 131 659 5602'/>
-                                <ChipLink to='email:info@mannafields.org'
-                                          avatar={<Avatar icon={<FontIcon>email</FontIcon>}/>}
-                                          label='info@mannafields.org'/>
-                                <ChipLink to='https://www.facebook.com/MannafieldsChristianSchool'
-                                          avatar={<Avatar icon={<FacebookBoxIcon className={module.icon}/>}/>}
-                                          label='Facebook'/>
-                                <ChipLink to='https://twitter.com/mannafields'
-                                          avatar={<Avatar icon={<TwitterBoxIcon className={module.icon}/>}/>}
-                                          label='@mannafields'/>
-                            </CardText>
-                        </Card>
-                        <Card className={Cell.getClassName({size: 4})}>
-                            <CardTitle title='Footer Block Two'/>
-                            <CardText>
-                                <ChipLink to='phone:+441316595602' avatar={<Avatar icon={<FontIcon>phone</FontIcon>}/>}
-                                          label='(+44) 131 659 5602'/>
-                                <ChipLink to='email:info@mannafields.org'
-                                          avatar={<Avatar icon={<FontIcon>email</FontIcon>}/>}
-                                          label='info@mannafields.org'/>
-                                <ChipLink to='https://www.facebook.com/MannafieldsChristianSchool'
-                                          avatar={<Avatar icon={<FacebookBoxIcon className={module.icon}/>}/>}
-                                          label='Facebook'/>
-                                <ChipLink to='https://twitter.com/mannafields'
-                                          avatar={<Avatar icon={<TwitterBoxIcon className={module.icon}/>}/>}
-                                          label='@mannafields'/>
-                            </CardText>
-                        </Card>
-                        <Card className={Cell.getClassName({size: 4})}>
-                            <CardTitle title='Footer Block Three'/>
-                            <CardText>
-                                <ChipLink to='phone:+441316595602' avatar={<Avatar icon={<FontIcon>phone</FontIcon>}/>}
-                                          label='(+44) 131 659 5602'/>
-                                <ChipLink to='email:info@mannafields.org'
-                                          avatar={<Avatar icon={<FontIcon>email</FontIcon>}/>}
-                                          label='info@mannafields.org'/>
-                                <ChipLink to='https://www.facebook.com/MannafieldsChristianSchool'
-                                          avatar={<Avatar icon={<FacebookBoxIcon className={module.icon}/>}/>}
-                                          label='Facebook'/>
-                                <ChipLink to='https://twitter.com/mannafields'
-                                          avatar={<Avatar icon={<TwitterBoxIcon className={module.icon}/>}/>}
-                                          label='@mannafields'/>
-                            </CardText>
-                        </Card>
+                        <FooterCardOne/>
+                        <FooterCardTwo/>
+                        <FooterCardThree/>
                     </Grid>
                 </div>
                 <div className={module.bottom}>
