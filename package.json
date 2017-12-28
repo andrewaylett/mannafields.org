@@ -11,9 +11,13 @@
     "gatsby": "^1.9.145",
     "gatsby-link": "^1.6.32",
     "gatsby-plugin-glamor": "^1.6.10",
+    "gatsby-plugin-sass": "^1.0.15",
     "gatsby-plugin-typography": "^1.7.10",
     "gatsby-source-filesystem": "^1.5.11",
     "gatsby-transformer-remark": "^1.7.26",
+    "mdi-react": "^2.1.19",
+    "react-burger-menu": "^2.1.11",
+    "react-md": "^1.2.9",
     "typography-theme-lawton": "^0.15.10"
   }
 }

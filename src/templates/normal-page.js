@@ -1,14 +1,13 @@
 import React from "react";
 
-import Container from '../components/container';
+import {Card, CardText} from 'react-md/lib/Cards';
 
 export default ({data}) => {
     const post = data.markdownRemark;
     return (
-        <Container>
-            <h1>{post.frontmatter.title}</h1>
-            <Container><div dangerouslySetInnerHTML={{__html: post.html}}/></Container>
-        </Container>
+        <Card>
+            <CardText><div dangerouslySetInnerHTML={{__html: post.html}}/></CardText>
+        </Card>
     );
 };
 

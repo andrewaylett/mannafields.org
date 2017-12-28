@@ -11,6 +11,7 @@ module.exports = {
         },
         'gatsby-transformer-remark',
         'gatsby-plugin-glamor',
+        'gatsby-plugin-sass',
         {
             resolve: 'gatsby-plugin-typography',
             options: {
