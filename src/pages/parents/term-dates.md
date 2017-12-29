@@ -4,8 +4,6 @@ slug: parents/term-dates
 index: 31
 ---
 
-# Term dates 2017/18
-
 School Session Dates 2017/18
 
 |              | Day     | Date            |

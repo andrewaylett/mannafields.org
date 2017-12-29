@@ -4,8 +4,6 @@ index: 12
 slug: about/curriculum
 ---
 
-#Curriculum
-
 We have a clear Christian philosophy of education, which acknowledges God as the ultimate source of all subjects, wisdom and understanding. Pupils are shown how God’s Word is relevant to all areas of learning, life and experience, gradually building a Christ-like world-view which will help them to handle an increasingly secularised world.
 
 The integrated curriculum covers all areas necessary to ensure a good all-round schooling. The core work is organised on a project basis. Fifteen projects on a three-year cycle are all based on aspects of the character of God. The whole school studies the same theme, which is treated differently for the various ages and stages. In addition core language and maths work are consolidated using published graded schemes. During the course of the week the children may also elect to learn a musical instrument.

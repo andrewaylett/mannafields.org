@@ -4,7 +4,6 @@ slug: "why-christian-education/testimonies"
 index: 21
 ---
 
-# Testimonies
 ##Lizzie Aylett
 
 My older two children attend Mannafields and love the school.  We heard about the school through a friend, and initially were not very interested – we did not want to wrap our children in a nice Christian “bubble”, and wanted to be reaching out to society. However, the more we thought about it and discussed it with our friends, the more we realised that it is our responsibility as parents to be nurturing our children and training them up rather than thrusting them into schooling that is at best “multi-faith” and at worst God-hating.

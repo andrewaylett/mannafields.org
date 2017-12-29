@@ -5,8 +5,6 @@ subheader: true
 index: 20
 ---
 
-# Why Christian Education?
-
 Every parent agrees that a good education is one of the most vital and significant aspects of their child’s development and preparation for adulthood. Some parents go to great lengths to access the right school: moving house to be in the right catchment area or paying steep fees for their child to attend one of the prestigious private schools. Why? Because there is an undisputed and clear correlation between the education of a child and their later success as an adult.
 
 Where to educate? The stakes are high because the consequences are huge. It is parents that must make these decisions. Some parents try to avoid any risk by opting for the conventional and safe option. But is it safe to put God in a box? Is it possible to put God in a box and still regard Him as Almighty God? Although you might not think about it in these terms, a child in a non-Christian school is taught that God, if He is even acknowledged, belongs in a box, isolated and separate from life.

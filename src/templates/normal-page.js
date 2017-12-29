@@ -1,15 +1,16 @@
 import React from "react";
 import Helmet from 'react-helmet';
 
-import {Card, CardText} from 'react-md/lib/Cards';
+import {Card, CardText, CardTitle} from 'react-md/lib/Cards';
 
 export default ({data}) => {
     const post = data.markdownRemark;
     return (
         <Card>
             <Helmet>
-                <title>{post.frontmatter.title} | Mannafields Christian School</title>
+                <title>{post.frontmatter.label ? post.frontmatter.label : post.frontmatter.title} | Mannafields Christian School</title>
             </Helmet>
+            <CardTitle title={post.frontmatter.title}/>
             <CardText><div dangerouslySetInnerHTML={{__html: post.html}}/></CardText>
         </Card>
     );
@@ -21,6 +22,7 @@ export const query = graphql`
       html
       frontmatter {
         title
+        label
       }
     }
   }

@@ -32,7 +32,7 @@ function getNavList(query) {
     for (let node of query.allMarkdownRemark.edges) {
         node = node.node;
         let pageDetails = {
-            primaryText: node.frontmatter.title,
+            primaryText: node.frontmatter.label ? node.frontmatter.label : node.frontmatter.title,
             component: Link,
             to: node.fields.slug,
         };
@@ -136,6 +136,7 @@ export const query = graphql`
                         icon
                         subheader
                         index
+                        label
                     }
                     fields {
                         slug
