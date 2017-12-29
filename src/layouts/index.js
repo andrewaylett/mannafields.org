@@ -51,13 +51,11 @@ function getNavList(query) {
 class ChipLink extends React.Component {
     render() {
         return (
-            <span>
-            <Link to={this.props.to}>
+            <Link to={this.props.to} className={module.chip}>
                 <Chip lassName={module.chiplink} label={this.props.label}
                       avatar={this.props.avatar}/>
             </Link>
-                &nbsp;
-            </span>)
+        );
     }
 
     static propTypes = {
@@ -68,13 +66,11 @@ class ChipLink extends React.Component {
 class ChipA extends React.Component {
     render() {
         return (
-            <span>
-            <a href={this.props.to}>
+            <a href={this.props.to} className={module.chip}>
                 <Chip lassName={module.chiplink} label={this.props.label}
                       avatar={this.props.avatar}/>
             </a>
-                &nbsp;
-            </span>)
+        );
     }
 
     static propTypes = {
@@ -86,7 +82,6 @@ export default ({children, data}) => {
     // const pageData = getPageData(data);
     return <div className={module.everything}>
         <NavigationDrawer
-            drawerTitle='Mannafields'
             toolbarTitle='Mannafields Christian School'
             contentClassName="main-content"
             navItems={getNavList(data)}
@@ -97,6 +92,9 @@ export default ({children, data}) => {
             <div className={module.wrapper}>
                 {children()}
                 <div className={module.main}>
+                    <ChipLink to='/contact-us/'
+                              avatar={<Avatar icon={<FontIcon>school</FontIcon>}/>}
+                              label='Contact Us'/>
                     <ChipA to='tel:+441316595602' avatar={<Avatar icon={<FontIcon>phone</FontIcon>}/>}
                            label='(+44) 131 659 5602'/>
                     <ChipA to='mailto:info@mannafields.org'
@@ -108,9 +106,6 @@ export default ({children, data}) => {
                     <ChipA to='https://twitter.com/mannafields'
                            avatar={<Avatar icon={<TwitterBoxIcon className={module.icon}/>}/>}
                            label='@mannafields'/>
-                    <ChipLink to='/contact-us/'
-                              avatar={<Avatar icon={<FontIcon>school</FontIcon>}/>}
-                              label='Contact Us'/>
                 </div>
                 <div className={module.bottom}>
                     Copyright &copy; 2004-2017 Mannafields Christian Education Association. Scottish Charity No.

@@ -31,8 +31,12 @@
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   margin-top: 2ex;
-  padding: 1ex;
+  padding: 1em;
   text-align: center;
+}
+
+.chip {
+  margin: 1em;
 }
 
 .everything {
@@ -41,11 +45,6 @@
 
 .icon {
   fill: rgb(245, 245, 245);
-}
-
-.chiplink {
-  margin-top: 0.5ex;
-  cursor: pointer;
 }
 
 
