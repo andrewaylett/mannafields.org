@@ -43,6 +43,7 @@ exports.createPages = async ({graphql, boundActionCreators}) => {
                 up: node.fields.up,
                 prev: node.fields.prev,
                 next: node.fields.next,
+                hero_image: node.fields.hero_image,
             },
         })
     });

@@ -3,6 +3,7 @@ title: Contact
 slug: contact-us
 index: 99
 subheader: true
+hero_image: contact
 ---
 
 The school postal address is:

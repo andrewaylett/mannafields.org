@@ -6,6 +6,8 @@ import {Grid, Cell} from 'react-md/lib/Grids';
 import {FontIcon} from 'react-md/lib/FontIcons';
 import {Avatar} from 'react-md/lib/Avatars';
 import {ChipLink} from '../components/Chips';
+import {Media, MediaOverlay} from 'react-md/lib/Media';
+import Img from 'gatsby-image';
 
 import module from './normalpage.module.css';
 
@@ -27,6 +29,29 @@ function navigation({up, prev, next}) {
     }
 }
 
+function imageSizes(data, basename) {
+    for (let edge of data.allFile.edges) {
+        let node = edge.node;
+        if (node.relativePath === 'images/' + basename + '.jpg') {
+            return node.childImageSharp.sizes;
+        }
+    }
+    return null;
+}
+
+function header(data) {
+    if (data.markdownRemark.frontmatter.hero_image) {
+        return <Media>
+            <Img sizes={imageSizes(data, data.markdownRemark.frontmatter.hero_image)}/>
+            <MediaOverlay>
+                <CardTitle title={data.markdownRemark.frontmatter.title}/>
+            </MediaOverlay>
+        </Media>;
+    } else {
+        return <CardTitle title={data.markdownRemark.frontmatter.title}/>
+    }
+}
+
 export default ({data}) => {
     const post = data.markdownRemark;
     return (
@@ -34,7 +59,7 @@ export default ({data}) => {
             <Helmet>
                 <title>{post.frontmatter.label ? post.frontmatter.label : post.frontmatter.title} | Mannafields Christian School</title>
             </Helmet>
-            <CardTitle title={post.frontmatter.title}/>
+            {header(data)}
             <CardText>
                 {navigation(post.frontmatter)}
                 <div dangerouslySetInnerHTML={{__html: post.html}}/>
@@ -54,8 +79,23 @@ export const query = graphql`
         up
         prev
         next
+        hero_image
       }
     }
+      allFile {
+          edges{
+              node {
+                  relativePath
+                  childImageSharp {
+                      # Specify the image processing steps right in the query
+                      # Makes it trivial to update as your page's design changes.
+                      sizes(maxWidth: 960) {
+                          ...GatsbyImageSharpSizes
+                      }
+                  }
+              }
+          }
+      }
   }
 `;
 
