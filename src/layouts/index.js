@@ -39,9 +39,6 @@ function getNavList(query) {
             component: Link,
             to: node.fields.slug,
         };
-        if (node.frontmatter.icon) {
-            pageDetails.leftIcon = <FontIcon>{node.frontmatter.icon}</FontIcon>;
-        }
         if (node.frontmatter.subheader) {
             result.push({divider: true});
             pageDetails.component = EmLink;
@@ -89,6 +86,7 @@ export default ({children, data}) => {
             toolbarTitle='Mannafields Christian School'
             contentClassName="main-content"
             navItems={getNavList(data)}
+            defaultMedia='desktop'
             mobileDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY}
             tabletDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY}
             desktopDrawerType={NavigationDrawer.DrawerTypes.FULL_HEIGHT}
@@ -132,7 +130,6 @@ export const query = graphql`
                 node {
                     frontmatter {
                         title
-                        icon
                         subheader
                         index
                         label

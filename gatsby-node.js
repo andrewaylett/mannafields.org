@@ -37,7 +37,6 @@ exports.createPages = async ({graphql, boundActionCreators}) => {
             context: {
                 // Data passed to context is available in page queries as GraphQL variables.
                 slug: node.fields.slug,
-                icon: node.fields.icon,
                 subheader: node.fields.subheader,
                 index: node.fields.index,
                 label: node.fields.label,
