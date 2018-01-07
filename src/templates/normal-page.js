@@ -22,9 +22,9 @@ function maybeLink(ref, direction, label) {
 function navigation({up, prev, next}) {
     if (up || prev || next) {
         return <Grid>
-            <Cell className={module.cell} size={4}>{maybeLink(prev, 'back')}</Cell>
+            <Cell className={module.cell} size={4}>{maybeLink(prev, 'back', 'Previous')}</Cell>
             <Cell className={module.cell} size={4}>{maybeLink(up, 'upward', 'Contents')}</Cell>
-            <Cell className={module.cell} size={4}>{maybeLink(next, 'forward')}</Cell>
+            <Cell className={module.cell} size={4}>{maybeLink(next, 'forward', 'Next')}</Cell>
         </Grid>
     }
 }
@@ -59,9 +59,9 @@ export default ({data}) => {
             <Helmet>
                 <title>{post.frontmatter.label ? post.frontmatter.label : post.frontmatter.title} | Mannafields Christian School</title>
             </Helmet>
+            {navigation(post.frontmatter)}
             {header(data)}
             <CardText>
-                {navigation(post.frontmatter)}
                 <div dangerouslySetInnerHTML={{__html: post.html}}/>
                 {navigation(post.frontmatter)}
             </CardText>
