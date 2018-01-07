@@ -18,6 +18,46 @@ function imageSizes(data, basename) {
     return null;
 }
 
+function mediaForPage(data, node) {
+    let text = node.frontmatter.label ? node.frontmatter.label : node.frontmatter.title;
+    if (node.frontmatter.hero_image) {
+        return (
+            <Media>
+                <Img sizes={imageSizes(data, node.frontmatter.hero_image)}/>
+                <MediaOverlay>
+                    <CardTitle title={text}/>
+                </MediaOverlay>
+            </Media>
+        );
+    } else {
+        return (
+            <Media>
+                <MediaOverlay>
+                    <CardTitle title={text}/>
+                </MediaOverlay>
+            </Media>
+        );
+    }
+}
+
+function cardForPage(data, node) {
+    return <Card className={Cell.getClassName({side: 4})}>
+        <Link to={node.fields.slug}>
+            {mediaForPage(data, node)}
+        </Link>
+    </Card>;
+}
+
+function cards(data) {
+    let result = [];
+    for (let edge of data.allMarkdownRemark.edges) {
+        let node = edge.node;
+        if (node.frontmatter.subheader) {
+            result.push(cardForPage(data, node));
+        }
+    }
+    return result;
+}
 
 export default ({data}) => (
     <div>
@@ -31,96 +71,7 @@ export default ({data}) => (
             </CardText>
         </Card>
         <Grid>
-            <Card className={Cell.getClassName({size: 4})}>
-                <Link to='/about/'>
-                    <Media>
-                        <Img sizes={imageSizes(data, 'about')}/>
-                        <MediaOverlay>
-                            <CardTitle title='About Mannafields'/>
-                        </MediaOverlay>
-                    </Media>
-                </Link>
-            </Card>
-            <Card className={Cell.getClassName({size: 4})}>
-                <Link to='/contact-us/'>
-                    <Media>
-                        <Img sizes={imageSizes(data, 'contact')}/>
-                        <MediaOverlay>
-                            <CardTitle title='Contact Mannafields'/>
-                        </MediaOverlay>
-                    </Media>
-                </Link>
-            </Card>
-            <Card className={Cell.getClassName({size: 4})}>
-                <Link to='/why-christian-education/'>
-                    <Media>
-                        <Img sizes={imageSizes(data, 'about')}/>
-                        <MediaOverlay>
-                            <CardTitle title='What We Do' subtitle={'Why Christian Education?'}/>
-                        </MediaOverlay>
-                    </Media>
-                </Link>
-            </Card>
-            <Card className={Cell.getClassName({size: 4})}>
-                <Link to='/about/'>
-                    <Media>
-                        <Img sizes={imageSizes(data, 'about')}/>
-                        <MediaOverlay>
-                            <CardTitle title='About Mannafields'/>
-                        </MediaOverlay>
-                    </Media>
-                </Link>
-            </Card>
-            <Card className={Cell.getClassName({size: 4})}>
-                <Link to='/contact-us/'>
-                    <Media>
-                        <Img sizes={imageSizes(data, 'contact')}/>
-                        <MediaOverlay>
-                            <CardTitle title='Contact Mannafields'/>
-                        </MediaOverlay>
-                    </Media>
-                </Link>
-            </Card>
-            <Card className={Cell.getClassName({size: 4})}>
-                <Link to='/why-christian-education/'>
-                    <Media>
-                        <Img sizes={imageSizes(data, 'about')}/>
-                        <MediaOverlay>
-                            <CardTitle title='What We Do' subtitle={'Why Christian Education?'}/>
-                        </MediaOverlay>
-                    </Media>
-                </Link>
-            </Card>
-            <Card className={Cell.getClassName({size: 4})}>
-                <Link to='/about/'>
-                    <Media>
-                        <Img sizes={imageSizes(data, 'about')}/>
-                        <MediaOverlay>
-                            <CardTitle title='About Mannafields'/>
-                        </MediaOverlay>
-                    </Media>
-                </Link>
-            </Card>
-            <Card className={Cell.getClassName({size: 4})}>
-                <Link to='/contact-us/'>
-                    <Media>
-                        <Img sizes={imageSizes(data, 'contact')}/>
-                        <MediaOverlay>
-                            <CardTitle title='Contact Mannafields'/>
-                        </MediaOverlay>
-                    </Media>
-                </Link>
-            </Card>
-            <Card className={Cell.getClassName({size: 4})}>
-                <Link to='/why-christian-education/'>
-                    <Media>
-                        <Img sizes={imageSizes(data, 'about')}/>
-                        <MediaOverlay>
-                            <CardTitle title='What We Do' subtitle={'Why Christian Education?'}/>
-                        </MediaOverlay>
-                    </Media>
-                </Link>
-            </Card>
+            {cards(data)}
         </Grid>
     </div>
 );
@@ -141,5 +92,23 @@ export const query = graphql`
               }
           }
       }
+        allMarkdownRemark(
+            sort: { order: ASC, fields: [frontmatter___index] }
+        ) {
+            edges {
+                node {
+                    frontmatter {
+                        title
+                        subheader
+                        index
+                        label
+                        hero_image
+                    }
+                    fields {
+                        slug
+                    }
+                }
+            }
+        }
   }
 `;
