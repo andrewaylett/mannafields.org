@@ -4,6 +4,7 @@ label: Home Education
 slug: home-education-partnership
 subheader: true
 index: 50
+hero_image: IMG_3055
 ---
 
 Every family is different: we all have different values, talents, experiences and priorities. But we all have the same goal as parents – to raise our children as best we can, to develop their individual potential and skills. Mannafields exists to aid parents in that task, whether through full-time schooling, part-time home-education partnership or individual classes.
