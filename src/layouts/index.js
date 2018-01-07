@@ -56,7 +56,7 @@ class ChipLink extends React.Component {
     render() {
         return (
             <Link to={this.props.to} className={module.chip}>
-                <Chip lassName={module.chiplink} label={this.props.label}
+                <Chip className={module.chiplink} label={this.props.label}
                       avatar={this.props.avatar}/>
             </Link>
         );
@@ -71,7 +71,7 @@ class ChipA extends React.Component {
     render() {
         return (
             <a href={this.props.to} className={module.chip}>
-                <Chip lassName={module.chiplink} label={this.props.label}
+                <Chip className={module.chiplink} label={this.props.label}
                       avatar={this.props.avatar}/>
             </a>
         );

@@ -4,6 +4,7 @@ label: About
 slug: about
 subheader: true
 index: 10
+icon: school
 ---
 
 Mannafields Christian School provides a Christ-centred education for children from P1-S2 in the heart of Edinburgh.

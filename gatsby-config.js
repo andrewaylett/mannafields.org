@@ -9,7 +9,21 @@ module.exports = {
                 path: `${__dirname}/src/`,
             },
         },
-        'gatsby-transformer-remark',
+        {
+            resolve: 'gatsby-transformer-remark',
+            options: {
+                plugins: [
+                    {
+                        resolve: 'gatsby-remark-images',
+                        options: {
+                            maxWidth: 960,
+                            linkImagesToOriginal: false,
+                        }
+                    }
+                ]
+            }
+        },
+        'gatsby-transformer-sharp',
         'gatsby-plugin-glamor',
         'gatsby-plugin-sass',
         {
