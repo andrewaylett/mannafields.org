@@ -40,6 +40,9 @@ exports.createPages = async ({graphql, boundActionCreators}) => {
                 subheader: node.fields.subheader,
                 index: node.fields.index,
                 label: node.fields.label,
+                up: node.fields.up,
+                prev: node.fields.prev,
+                next: node.fields.next,
             },
         })
     });

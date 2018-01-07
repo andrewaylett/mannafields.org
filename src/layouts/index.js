@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Link from 'gatsby-link';
 import FontIcon from 'react-md/lib/FontIcons';
@@ -8,13 +7,14 @@ import TwitterBoxIcon from 'mdi-react/TwitterBoxIcon';
 import FacebookBoxIcon from 'mdi-react/FacebookBoxIcon';
 
 import NavigationDrawer from 'react-md/lib/NavigationDrawers';
-import {Chip} from 'react-md/lib/Chips';
 
 import module from './index.module.scss';
 
 import 'react-md/src/scss/_react-md.scss'
 import 'react-md/dist/react-md.blue-light_blue.min.css'
 import 'react-md/src/scss/_typography.scss'
+
+import {ChipLink, ChipA} from '../components/Chips';
 
 class EmLink extends React.Component {
     render() {
@@ -34,6 +34,9 @@ function getNavList(query) {
 
     for (let node of query.allMarkdownRemark.edges) {
         node = node.node;
+        if (!node.frontmatter.index) {
+            continue;
+        }
         let pageDetails = {
             primaryText: node.frontmatter.label ? node.frontmatter.label : node.frontmatter.title,
             component: Link,
@@ -47,36 +50,6 @@ function getNavList(query) {
     }
 
     return result;
-}
-
-class ChipLink extends React.Component {
-    render() {
-        return (
-            <Link to={this.props.to} className={module.chip}>
-                <Chip className={module.chiplink} label={this.props.label}
-                      avatar={this.props.avatar}/>
-            </Link>
-        );
-    }
-
-    static propTypes = {
-        to: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired
-    }
-}
-
-class ChipA extends React.Component {
-    render() {
-        return (
-            <a href={this.props.to} className={module.chip}>
-                <Chip className={module.chiplink} label={this.props.label}
-                      avatar={this.props.avatar}/>
-            </a>
-        );
-    }
-
-    static propTypes = {
-        to: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired
-    }
 }
 
 export default ({children, data}) => {
