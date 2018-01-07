@@ -41,7 +41,7 @@ function mediaForPage(data, node) {
 }
 
 function cardForPage(data, node) {
-    return <Card className={Cell.getClassName({side: 4})}>
+    return <Card className={Cell.getClassName({side: 4})} key={node.fields.slug}>
         <Link to={node.fields.slug}>
             {mediaForPage(data, node)}
         </Link>
