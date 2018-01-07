@@ -2,7 +2,6 @@
 title: Thoroughly Preparing the Next Generation
 label: About
 slug: about
-icon: school
 subheader: true
 index: 10
 ---

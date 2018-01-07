@@ -16,6 +16,12 @@ import 'react-md/src/scss/_react-md.scss'
 import 'react-md/dist/react-md.blue-light_blue.min.css'
 import 'react-md/src/scss/_typography.scss'
 
+class EmLink extends React.Component {
+    render() {
+        return <u><Link {...this.props}/></u>
+    }
+}
+
 function getNavList(query) {
     const result = [
         {
@@ -23,9 +29,6 @@ function getNavList(query) {
             leftIcon: <FontIcon>home</FontIcon>,
             component: Link,
             to: "/"
-        },
-        {
-            divider: true
         },
     ];
 
@@ -40,7 +43,8 @@ function getNavList(query) {
             pageDetails.leftIcon = <FontIcon>{node.frontmatter.icon}</FontIcon>;
         }
         if (node.frontmatter.subheader) {
-            pageDetails.subheader = true;
+            result.push({divider: true});
+            pageDetails.component = EmLink;
         }
         result.push(pageDetails);
     }
