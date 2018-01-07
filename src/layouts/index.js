@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Helmet from 'react-helmet';
+
 import Link from 'gatsby-link';
 import FontIcon from 'react-md/lib/FontIcons';
 import Avatar from 'react-md/lib/Avatars';
@@ -64,6 +66,9 @@ export default ({children, data}) => {
             tabletDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY}
             desktopDrawerType={NavigationDrawer.DrawerTypes.FULL_HEIGHT}
         >
+            <Helmet>
+                <link rel='icon' href='/favicons/logo-192x192.png' />
+            </Helmet>
             <div className={module.wrapper}>
                 {children()}
                 <div className={module.main}>
