@@ -1,3 +1,8 @@
 .cell {
     text-align: center;
 }
+
+.card_link {
+    height: 100%;
+    text-underline: none;
+}

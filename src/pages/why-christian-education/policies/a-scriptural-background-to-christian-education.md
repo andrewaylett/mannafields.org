@@ -3,6 +3,7 @@ title: A Scriptural Background to Christian Education
 slug: why-christian-education/policies/a-scriptural-background-to-christian-education
 up: /why-christian-education/policies/
 next: /why-christian-education/policies/the-christ-centred-curriculum/
+index: 1
 ---
 
 The prophet Habakkuk foretold of a day when:

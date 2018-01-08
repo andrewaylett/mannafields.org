@@ -10,12 +10,13 @@ import {Media, MediaOverlay} from 'react-md/lib/Media';
 import Img from 'gatsby-image';
 
 import module from './normalpage.module.css';
+import Link from "gatsby-link/index";
 
 function maybeLink(ref, direction, label) {
     if (ref) {
         return <ChipLink to={ref}
                          avatar={<Avatar icon={<FontIcon>arrow_{direction}</FontIcon>}/>}
-                         label={label ? label : direction} />;
+                         label={label ? label : direction}/>;
     }
 }
 
@@ -52,20 +53,53 @@ function header(data) {
     }
 }
 
+
+function getNavList(query, slug) {
+    const result = [];
+
+    for (let node of query.allMarkdownRemark.edges) {
+        node = node.node;
+        let node_slug = node.fields.slug;
+        if (!node_slug.startsWith(slug)) {
+            continue;
+        }
+        let level = (node_slug.match(/\//g) || []).length - (slug.match(/\//g) || []).length;
+        if (level !== 1) {
+            continue;
+        }
+        result.push(
+            <Link to={node.fields.slug} className={Cell.getClassName({size: 4})} key={node.fields.slug}>
+                <Card className={module.card_link}>
+                    <CardTitle title={node.frontmatter.label ? node.frontmatter.label : node.frontmatter.title}/>
+                </Card>
+            </Link>
+        );
+    }
+
+    return result;
+}
+
 export default ({data}) => {
     const post = data.markdownRemark;
     return (
-        <Card>
-            <Helmet>
-                <title>{post.frontmatter.label ? post.frontmatter.label : post.frontmatter.title} | Mannafields Christian School</title>
-            </Helmet>
-            {navigation(post.frontmatter)}
-            {header(data)}
-            <CardText>
-                <div dangerouslySetInnerHTML={{__html: post.html}}/>
+        <div>
+            <Card>
+                <Helmet>
+                    <title>{post.frontmatter.label ? post.frontmatter.label : post.frontmatter.title} | Mannafields
+                        Christian School</title>
+                </Helmet>
                 {navigation(post.frontmatter)}
-            </CardText>
-        </Card>
+                {header(data)}
+                <CardText>
+                    <div dangerouslySetInnerHTML={{__html: post.html}}/>
+                    {navigation(post.frontmatter)}
+                </CardText>
+            </Card>
+
+            <Grid>
+                {getNavList(data, post.fields.slug)}
+            </Grid>
+        </div>
     );
 };
 
@@ -81,6 +115,9 @@ export const query = graphql`
         next
         hero_image
       }
+      fields {
+        slug
+      }
     }
       allFile {
           edges{
@@ -92,6 +129,24 @@ export const query = graphql`
                       sizes(maxWidth: 960) {
                           ...GatsbyImageSharpSizes
                       }
+                  }
+              }
+          }
+      }
+      allMarkdownRemark(
+          sort: { order: ASC, fields: [frontmatter___index] }
+      ) {
+          edges {
+              node {
+                  frontmatter {
+                      title
+                      subheader
+                      index
+                      label
+                      hero_image
+                  }
+                  fields {
+                      slug
                   }
               }
           }

@@ -4,6 +4,7 @@ slug: why-christian-education/policies/teaching-and-learning
 prev: /why-christian-education/policies/the-christ-centred-curriculum/
 next: /why-christian-education/policies/maths/
 up: /why-christian-education/policies/
+index: 3
 ---
 
 

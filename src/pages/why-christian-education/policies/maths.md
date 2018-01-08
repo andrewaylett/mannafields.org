@@ -4,6 +4,7 @@ slug: why-christian-education/policies/maths
 prev: /why-christian-education/policies/teaching-and-learning/
 next: /why-christian-education/policies/language/
 up: /why-christian-education/policies/
+index: 4
 ---
 
 There are many elements of God’s character that we can see in studying maths and that can help us to understand Him.

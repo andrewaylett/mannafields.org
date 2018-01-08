@@ -3,6 +3,7 @@ title: Language
 slug: why-christian-education/policies/language
 prev: /why-christian-education/policies/maths/
 up: /why-christian-education/policies/
+index: 5
 ---
 
 ## Principles

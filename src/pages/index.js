@@ -52,7 +52,8 @@ function cards(data) {
     let result = [];
     for (let edge of data.allMarkdownRemark.edges) {
         let node = edge.node;
-        if (node.frontmatter.subheader) {
+        let level = (node.fields.slug.match(/\//g) || []).length - 1;
+        if (level === 1) {
             result.push(cardForPage(data, node));
         }
     }

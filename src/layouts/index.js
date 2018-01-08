@@ -36,7 +36,8 @@ function getNavList(query) {
 
     for (let node of query.allMarkdownRemark.edges) {
         node = node.node;
-        if (!node.frontmatter.index) {
+        let level = (node.fields.slug.match(/\//g) || []).length - 1;
+        if (level > 2) {
             continue;
         }
         let pageDetails = {
@@ -44,7 +45,7 @@ function getNavList(query) {
             component: Link,
             to: node.fields.slug,
         };
-        if (node.frontmatter.subheader) {
+        if (level === 1) {
             result.push({divider: true});
             pageDetails.component = EmLink;
         }
