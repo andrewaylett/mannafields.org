@@ -1,9 +1,6 @@
 ---
 title: Why Christian Education?
-slug: why-christian-education
-subheader: true
 index: 20
-hero_image: IMG_9023
 ---
 
 Every parent agrees that a good education is one of the most vital and significant aspects of their child’s development and preparation for adulthood. Some parents go to great lengths to access the right school: moving house to be in the right catchment area or paying steep fees for their child to attend one of the prestigious private schools. Why? Because there is an undisputed and clear correlation between the education of a child and their later success as an adult.

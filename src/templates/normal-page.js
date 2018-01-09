@@ -30,20 +30,10 @@ function navigation({up, prev, next}) {
     }
 }
 
-function imageSizes(data, basename) {
-    for (let edge of data.allFile.edges) {
-        let node = edge.node;
-        if (node.relativePath === 'images/' + basename + '.jpg') {
-            return node.childImageSharp.sizes;
-        }
-    }
-    return null;
-}
-
 function header(data) {
-    if (data.markdownRemark.frontmatter.hero_image) {
+    if (data.imageSharp) {
         return <Media>
-            <Img sizes={imageSizes(data, data.markdownRemark.frontmatter.hero_image)}/>
+            <Img sizes={data.imageSharp.sizes}/>
             <MediaOverlay>
                 <CardTitle title={data.markdownRemark.frontmatter.title}/>
             </MediaOverlay>
@@ -98,25 +88,22 @@ export const query = graphql`
         up
         prev
         next
-        hero_image
       }
       fields {
         slug
         level
       }
     }
-      allFile {
-          edges{
-              node {
-                  relativePath
-                  childImageSharp {
-                      # Specify the image processing steps right in the query
-                      # Makes it trivial to update as your page's design changes.
-                      sizes(maxWidth: 960) {
-                          ...GatsbyImageSharpSizes
-                      }
-                  }
-              }
+      imageSharp(
+        fields: { matching_page: { eq: $slug } }
+      ){
+          fields {
+              matching_page
+          }
+          # Specify the image processing steps right in the query
+          # Makes it trivial to update as your page's design changes.
+          sizes(maxWidth: 960) {
+              ...GatsbyImageSharpSizes
           }
       }
       allMarkdownRemark(
@@ -127,10 +114,8 @@ export const query = graphql`
               node {
                   frontmatter {
                       title
-                      subheader
                       index
                       label
-                      hero_image
                   }
                   fields {
                       slug

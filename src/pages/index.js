@@ -8,11 +8,11 @@ import {Card, CardTitle, CardText} from 'react-md/lib/Cards';
 import {Grid, Cell} from 'react-md/lib/Grids';
 import {Media, MediaOverlay} from 'react-md/lib/Media';
 
-function imageSizes(data, basename) {
-    for (let edge of data.allFile.edges) {
+function imageSizes(data, for_page) {
+    for (let edge of data.allImageSharp.edges) {
         let node = edge.node;
-        if (node.relativePath === 'images/' + basename + '.jpg') {
-            return node.childImageSharp.sizes;
+        if (node.fields.matching_page === for_page) {
+            return node.sizes;
         }
     }
     return null;
@@ -20,10 +20,11 @@ function imageSizes(data, basename) {
 
 function mediaForPage(data, node) {
     let text = node.frontmatter.label ? node.frontmatter.label : node.frontmatter.title;
-    if (node.frontmatter.hero_image) {
+    let sizes = imageSizes(data, node.fields.slug);
+    if (sizes) {
         return (
             <Media>
-                <Img sizes={imageSizes(data, node.frontmatter.hero_image)}/>
+                <Img sizes={sizes}/>
                 <MediaOverlay>
                     <CardTitle title={text}/>
                 </MediaOverlay>
@@ -73,16 +74,18 @@ export default ({data}) => (
 
 export const query = graphql`
   query IndexImageSampleQuery {
-      allFile {
-          edges{
+      allImageSharp(
+         filter: { fields: { level: { eq: 1 } } }
+      ) {
+          edges {
               node {
-                  relativePath
-                  childImageSharp {
-                      # Specify the image processing steps right in the query
-                      # Makes it trivial to update as your page's design changes.
-                      sizes(maxWidth: 960) {
-                          ...GatsbyImageSharpSizes
-                      }
+                  fields {
+                    matching_page
+                  }
+                  # Specify the image processing steps right in the query
+                  # Makes it trivial to update as your page's design changes.
+                  sizes(maxWidth: 960) {
+                      ...GatsbyImageSharpSizes
                   }
               }
           }
@@ -95,10 +98,8 @@ export const query = graphql`
                 node {
                     frontmatter {
                         title
-                        subheader
                         index
                         label
-                        hero_image
                     }
                     fields {
                         slug

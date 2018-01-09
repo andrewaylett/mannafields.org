@@ -29,6 +29,22 @@ exports.onCreateNode = ({node, getNode, boundActionCreators}) => {
             value: resolved_slug,
         });
     }
+
+    if (node.internal.type === 'ImageSharp') {
+        const slug = createFilePath({node, getNode, basePath: `images/pages`});
+        let level = (slug.match(/\//g) || []).length - 1;
+        let matching_page = slug.replace(/\..*$/, '/');
+        createNodeField({
+            node,
+            name: 'level',
+            value: level,
+        });
+        createNodeField({
+            node,
+            name: 'matching_page',
+            value: matching_page,
+        });
+    }
 };
 
 exports.createPages = async ({graphql, boundActionCreators}) => {

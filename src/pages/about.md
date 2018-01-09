@@ -1,11 +1,8 @@
 ---
 title: Thoroughly Preparing the Next Generation
 label: About
-slug: about
-subheader: true
 index: 10
 icon: school
-hero_image: about
 ---
 
 Mannafields Christian School provides a Christ-centred education for children from P1-S2 in the heart of Edinburgh.

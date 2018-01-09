@@ -109,7 +109,6 @@ export const query = graphql`
                 node {
                     frontmatter {
                         title
-                        subheader
                         index
                         label
                     }
