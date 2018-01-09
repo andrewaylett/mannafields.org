@@ -54,28 +54,14 @@ function header(data) {
 }
 
 
-function getNavList(query, slug, parent_level) {
-    const result = [];
-
-    for (let {node} of query.allMarkdownRemark.edges) {
-        let node_slug = node.fields.slug;
-        if (!node_slug.startsWith(slug)) {
-            continue;
-        }
-        let level = node.fields.level - parent_level;
-        if (level !== 1) {
-            continue;
-        }
-        result.push(
+function getNavList(query) {
+    return query.allMarkdownRemark.edges.map(({node}) => (
             <Link to={node.fields.slug} className={Cell.getClassName({size: 4})} key={node.fields.slug}>
                 <Card className={module.card_link}>
                     <CardTitle title={node.frontmatter.label ? node.frontmatter.label : node.frontmatter.title}/>
                 </Card>
             </Link>
-        );
-    }
-
-    return result;
+        ));
 }
 
 export default ({data}) => {
@@ -103,7 +89,7 @@ export default ({data}) => {
 };
 
 export const query = graphql`
-  query PageDataQuery($slug: String!) {
+  query PageDataQuery($slug: String!, $resolved_slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
@@ -134,6 +120,7 @@ export const query = graphql`
           }
       }
       allMarkdownRemark(
+          filter: {fields: {parent: {eq: $resolved_slug}}}
           sort: { order: ASC, fields: [frontmatter___index] }
       ) {
           edges {
@@ -148,6 +135,7 @@ export const query = graphql`
                   fields {
                       slug
                       level
+                      parent
                   }
               }
           }
