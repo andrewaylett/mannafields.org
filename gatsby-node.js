@@ -5,10 +5,16 @@ exports.onCreateNode = ({node, getNode, boundActionCreators}) => {
     const {createNodeField} = boundActionCreators;
     if (node.internal.type === `MarkdownRemark`) {
         const slug = createFilePath({node, getNode, basePath: `pages`});
+        let level = (slug.match(/\//g) || []).length - 1;
         createNodeField({
             node,
             name: `slug`,
             value: slug,
+        });
+        createNodeField({
+            node,
+            name: `level`,
+            value: level,
         });
     }
 };
@@ -31,20 +37,16 @@ exports.createPages = async ({graphql, boundActionCreators}) => {
     `);
 
     result.data.allMarkdownRemark.edges.map(({node}) => {
+        console.log(node.fields);
+        const component = path.resolve(`./src/templates/normal-page.js`);
+        const context = {
+            // Data passed to context is available in page queries as GraphQL variables.
+            slug: node.fields.slug
+        };
         createPage({
             path: node.fields.slug,
-            component: path.resolve(`./src/templates/normal-page.js`),
-            context: {
-                // Data passed to context is available in page queries as GraphQL variables.
-                slug: node.fields.slug,
-                subheader: node.fields.subheader,
-                index: node.fields.index,
-                label: node.fields.label,
-                up: node.fields.up,
-                prev: node.fields.prev,
-                next: node.fields.next,
-                hero_image: node.fields.hero_image,
-            },
+            component,
+            context,
         })
     });
 };

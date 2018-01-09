@@ -54,16 +54,15 @@ function header(data) {
 }
 
 
-function getNavList(query, slug) {
+function getNavList(query, slug, parent_level) {
     const result = [];
 
-    for (let node of query.allMarkdownRemark.edges) {
-        node = node.node;
+    for (let {node} of query.allMarkdownRemark.edges) {
         let node_slug = node.fields.slug;
         if (!node_slug.startsWith(slug)) {
             continue;
         }
-        let level = (node_slug.match(/\//g) || []).length - (slug.match(/\//g) || []).length;
+        let level = node.fields.level - parent_level;
         if (level !== 1) {
             continue;
         }
@@ -97,7 +96,7 @@ export default ({data}) => {
             </Card>
 
             <Grid>
-                {getNavList(data, post.fields.slug)}
+                {getNavList(data, post.fields.slug, post.fields.level)}
             </Grid>
         </div>
     );
@@ -117,6 +116,7 @@ export const query = graphql`
       }
       fields {
         slug
+        level
       }
     }
       allFile {
@@ -147,6 +147,7 @@ export const query = graphql`
                   }
                   fields {
                       slug
+                      level
                   }
               }
           }
