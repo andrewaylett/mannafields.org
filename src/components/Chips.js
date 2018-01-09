@@ -2,7 +2,6 @@ import React from 'react';
 
 import Link from 'gatsby-link';
 
-import PropTypes from 'prop-types';
 import {Chip} from 'react-md/lib/Chips';
 
 import css_module from './chips.module.scss';
@@ -16,10 +15,6 @@ class ChipLink extends React.Component {
             </Link>
         );
     }
-
-    static propTypes = {
-        to: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired
-    }
 }
 
 class ChipA extends React.Component {
@@ -30,10 +25,6 @@ class ChipA extends React.Component {
                       avatar={this.props.avatar}/>
             </a>
         );
-    }
-
-    static propTypes = {
-        to: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired
     }
 }
 

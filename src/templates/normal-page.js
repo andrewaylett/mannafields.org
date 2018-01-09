@@ -10,7 +10,7 @@ import {Media, MediaOverlay} from 'react-md/lib/Media';
 import Img from 'gatsby-image';
 
 import module from './normalpage.module.css';
-import Link from "gatsby-link/index";
+import Link from "gatsby-link";
 
 function maybeLink(ref, direction, label) {
     if (ref) {
@@ -45,7 +45,8 @@ function header(data) {
 
 
 function getNavList(query) {
-    return query.allMarkdownRemark.edges.map(({node}) => (
+    const edges = query.allMarkdownRemark ? query.allMarkdownRemark.edges : [];
+    return edges.map(({node}) => (
             <Link to={node.fields.slug} className={Cell.getClassName({size: 4})} key={node.fields.slug}>
                 <Card className={module.card_link}>
                     <CardTitle title={node.frontmatter.label ? node.frontmatter.label : node.frontmatter.title}/>
