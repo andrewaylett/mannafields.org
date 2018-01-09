@@ -49,15 +49,9 @@ function cardForPage(data, node) {
 }
 
 function cards(data) {
-    let result = [];
-    for (let edge of data.allMarkdownRemark.edges) {
-        let node = edge.node;
-        let level = (node.fields.slug.match(/\//g) || []).length - 1;
-        if (level === 1) {
-            result.push(cardForPage(data, node));
-        }
-    }
-    return result;
+    return data.allMarkdownRemark.edges.map(
+        ({node}) => cardForPage(data, node)
+    );
 }
 
 export default ({data}) => (
@@ -94,6 +88,7 @@ export const query = graphql`
           }
       }
         allMarkdownRemark(
+            filter: { fields: { level: { eq: 1 } } }
             sort: { order: ASC, fields: [frontmatter___index] }
         ) {
             edges {
