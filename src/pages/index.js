@@ -8,11 +8,11 @@ import {Card, CardTitle, CardText} from 'react-md/lib/Cards';
 import {Grid, Cell} from 'react-md/lib/Grids';
 import {Media, MediaOverlay} from 'react-md/lib/Media';
 
-function imageResolutions(data, for_page) {
+function imageSizes(data, for_page) {
     for (let edge of data.allImageSharp.edges) {
         let node = edge.node;
         if (node.fields.matching_page === for_page) {
-            return node.resolutions;
+            return node.sizes;
         }
     }
     return null;
@@ -20,11 +20,11 @@ function imageResolutions(data, for_page) {
 
 function mediaForPage(data, node) {
     let text = node.frontmatter.label ? node.frontmatter.label : node.frontmatter.title;
-    let resolutions = imageResolutions(data, node.fields.slug);
-    if (resolutions) {
+    let sizes = imageSizes(data, node.fields.slug);
+    if (sizes) {
         return (
             <Media>
-                <Img resolutions={resolutions}/>
+                <Img sizes={sizes}/>
                 <MediaOverlay>
                     <CardTitle title={text}/>
                 </MediaOverlay>
@@ -84,8 +84,8 @@ export const query = graphql`
                   }
                   # Specify the image processing steps right in the query
                   # Makes it trivial to update as your page's design changes.
-                  resolutions(width: 300, height: 225) {
-                      ...GatsbyImageSharpResolutions
+                  sizes(maxWidth: 960) {
+                      ...GatsbyImageSharpSizes
                   }
               }
           }
