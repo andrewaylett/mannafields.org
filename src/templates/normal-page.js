@@ -34,12 +34,31 @@ function header(data) {
     if (data.imageSharp) {
         return <Media>
             <Img sizes={data.imageSharp.sizes}/>
+            <div className={module.breadcrumbs_block}>
+                <Link to='/'>Home</Link>
+                {
+                    data.parents ? data.parents.edges.map(({node}) => (
+                        <Link to={node.fields.slug}
+                              key={node.fields.slug}>{node.frontmatter.label ? node.frontmatter.label : node.frontmatter.title}</Link>
+                    )) : []
+                }
+            </div>
             <MediaOverlay>
                 <CardTitle title={data.markdownRemark.frontmatter.title}/>
             </MediaOverlay>
         </Media>;
     } else {
-        return <CardTitle title={data.markdownRemark.frontmatter.title}/>
+        return [
+            <div className={module.breadcrumbs_inline}>
+                <Link to='/'>Home</Link>
+                {
+                    data.parents ? data.parents.edges.map(({node}) => ([
+                        <span> > </span>,
+                        <Link to={node.fields.slug}
+                              key={node.fields.slug}>{node.frontmatter.label ? node.frontmatter.label : node.frontmatter.title}</Link>
+                    ])) : []
+                }
+            </div>, <CardTitle title={data.markdownRemark.frontmatter.title}/>]
     }
 }
 
@@ -47,12 +66,12 @@ function header(data) {
 function getNavList(query) {
     const edges = query.allMarkdownRemark ? query.allMarkdownRemark.edges : [];
     return edges.map(({node}) => (
-            <Link to={node.fields.slug} className={Cell.getClassName({size: 4})} key={node.fields.slug}>
-                <Card className={module.card_link}>
-                    <CardTitle title={node.frontmatter.label ? node.frontmatter.label : node.frontmatter.title}/>
-                </Card>
-            </Link>
-        ));
+        <Link to={node.fields.slug} className={Cell.getClassName({size: 4})} key={node.fields.slug}>
+            <Card className={module.card_link}>
+                <CardTitle title={node.frontmatter.label ? node.frontmatter.label : node.frontmatter.title}/>
+            </Card>
+        </Link>
+    ));
 }
 
 export default ({data}) => {
@@ -64,7 +83,6 @@ export default ({data}) => {
                     <title>{post.frontmatter.label ? post.frontmatter.label : post.frontmatter.title} | Mannafields
                         Christian School</title>
                 </Helmet>
-                {navigation(post.frontmatter)}
                 {header(data)}
                 <CardText>
                     <div dangerouslySetInnerHTML={{__html: post.html}}/>
@@ -80,7 +98,7 @@ export default ({data}) => {
 };
 
 export const query = graphql`
-  query PageDataQuery($slug: String!, $resolved_slug: String!) {
+  query PageDataQuery($slug: String!, $resolved_slug: String!, $parent_regex: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
@@ -126,6 +144,24 @@ export const query = graphql`
               }
           }
       }
+      parents: allMarkdownRemark (
+      filter: {fields: {slug: {regex: $parent_regex }}}) {
+	  edges {
+	    node {
+	      fields {
+	        slug
+	        level
+	        parent
+	        resolved_slug
+          parent_regex
+          }
+          frontmatter {
+              label
+              title
+	      }
+	    }
+	  }
+	}
   }
 `;
 

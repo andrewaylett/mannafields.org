@@ -8,6 +8,20 @@ exports.onCreateNode = ({node, getNode, boundActionCreators}) => {
         let level = (slug.match(/\//g) || []).length - 1;
         const parent = path.resolve(slug, '..');
         const resolved_slug = path.resolve(slug);
+
+
+        let str = '';
+        let component_array = resolved_slug.split('/');
+        component_array.pop();
+        component_array.map((x) => (x + '\\/')).reverse().map((elem) => {str = '(' + elem + str + ')?'});
+        str = '/^' + str + '$/';
+        console.log(str);
+
+        createNodeField({
+            node,
+            name: 'parent_regex',
+            value: str,
+        });
         createNodeField({
             node,
             name: `slug`,
@@ -59,6 +73,7 @@ exports.createPages = async ({graphql, boundActionCreators}) => {
                 slug
                 level
                 resolved_slug
+                parent_regex
               }
             }
           }
@@ -73,6 +88,7 @@ exports.createPages = async ({graphql, boundActionCreators}) => {
             slug: node.fields.slug,
             level: node.fields.level,
             resolved_slug: node.fields.resolved_slug,
+            parent_regex: node.fields.parent_regex,
         };
         console.log(context);
         createPage({
