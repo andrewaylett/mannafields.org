@@ -9,12 +9,23 @@
 
 .breadcrumbs_block {
     position: absolute;
-    left: 0;
     top: 0;
+    width: 100%;
     padding: 0.5ex 1em;
-    background-color: #ffffff88;
+    background: rgba(0, 0, 0, .54);
+    z-index: 1;
+    color: #fff;
+}
+
+.breadcrumbs_block a:visited {
+    color: #fff;
 }
 
 .breadcrumbs_inline {
     padding: 0.5ex 1em;
+    color: black;
+}
+
+.breadcrumbs_inline a:visited {
+    color: black;
 }
