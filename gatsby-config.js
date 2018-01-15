@@ -53,7 +53,6 @@ module.exports = {
         },
         'gatsby-transformer-sharp',
         'gatsby-plugin-catch-links',
-        'gatsby-plugin-glamor',
         'gatsby-plugin-sass',
         {
             resolve: 'gatsby-plugin-typography',

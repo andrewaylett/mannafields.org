@@ -12,7 +12,6 @@
     "gatsby-image": "^1.0.31",
     "gatsby-link": "^1.6.32",
     "gatsby-plugin-catch-links": "^1.0.14",
-    "gatsby-plugin-glamor": "^1.6.10",
     "gatsby-plugin-manifest": "^1.0.12",
     "gatsby-plugin-offline": "^1.0.12",
     "gatsby-plugin-sass": "^1.0.15",
@@ -26,5 +25,8 @@
     "react-helmet": "^5.2.0",
     "react-md": "^1.2.9",
     "typography-theme-lawton": "^0.15.10"
+  },
+  "devDependencies": {
+    "source-map-explorer": "^1.5.0"
   }
 }
