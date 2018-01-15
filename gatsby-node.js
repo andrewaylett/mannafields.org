@@ -66,14 +66,20 @@ exports.createPages = async ({graphql, boundActionCreators}) => {
 
     const result = await graphql(`
       {
-        allMarkdownRemark {
+        allMarkdownRemark(
+            sort: { order: ASC, fields: [frontmatter___index] }
+        ) {
           edges {
             node {
               fields {
                 slug
                 level
                 resolved_slug
+                parent
                 parent_regex
+              }
+              frontmatter {
+                index
               }
             }
           }
@@ -81,7 +87,22 @@ exports.createPages = async ({graphql, boundActionCreators}) => {
       }
     `);
 
-    result.data.allMarkdownRemark.edges.map(({node}) => {
+    let edges = result.data.allMarkdownRemark.edges;
+
+    edges.reduce((map, {node}) => {
+        if (map.has(node.fields.parent)) {
+            const siblings = map.get(node.fields.parent);
+            const prev = siblings[siblings.length-1];
+            prev.next = node.fields.slug;
+            node.prev = prev.fields.slug;
+            siblings.push(node);
+        } else {
+            map.set(node.fields.parent, [node]);
+        }
+        return map;
+    }, new Map());
+
+    edges.forEach(({node}) => {
         const component = path.resolve(`./src/templates/normal-page.js`);
         const context = {
             // Data passed to context is available in page queries as GraphQL variables.
@@ -89,6 +110,8 @@ exports.createPages = async ({graphql, boundActionCreators}) => {
             level: node.fields.level,
             resolved_slug: node.fields.resolved_slug,
             parent_regex: node.fields.parent_regex,
+            next: node.next ? node.next : "",
+            prev: node.prev ? node.prev : "",
         };
         console.log(context);
         createPage({

@@ -12,20 +12,21 @@ import Img from 'gatsby-image';
 import module from './normalpage.module.css';
 import Link from "gatsby-link";
 
-function maybeLink(ref, direction, label) {
-    if (ref) {
-        return <ChipLink to={ref}
+function maybeLink(node, direction) {
+    if (node) {
+        return <ChipLink to={node.fields.slug}
                          avatar={<Avatar icon={<FontIcon>arrow_{direction}</FontIcon>}/>}
-                         label={label ? label : direction}/>;
+                         label={node.frontmatter.label ? node.frontmatter.label : node.frontmatter.title}/>;
     }
 }
 
-function navigation({up, prev, next}) {
-    if (up || prev || next) {
+function navigation({prev, next, markdownRemark, parents}) {
+    if (markdownRemark.fields.level >= 3) {
+        const parent = parents.edges[parents.edges.length-1].node;
         return <Grid>
-            <Cell className={module.cell} size={4}>{maybeLink(prev, 'back', 'Previous')}</Cell>
-            <Cell className={module.cell} size={4}>{maybeLink(up, 'upward', 'Contents')}</Cell>
-            <Cell className={module.cell} size={4}>{maybeLink(next, 'forward', 'Next')}</Cell>
+            <Cell className={module.cell} size={4}>{maybeLink(prev, 'back')}</Cell>
+            <Cell className={module.cell} size={4}>{maybeLink(parent, 'upward')}</Cell>
+            <Cell className={module.cell} size={4}>{maybeLink(next, 'forward')}</Cell>
         </Grid>
     }
 }
@@ -49,7 +50,7 @@ function header(data) {
         </Media>;
     } else {
         return [
-            <div className={module.breadcrumbs_inline}>
+            <div className={module.breadcrumbs_inline} key='breadcrumbs'>
                 <Link to='/'>Home</Link>
                 {
                     data.parents ? data.parents.edges.map(({node}) => ([
@@ -58,7 +59,7 @@ function header(data) {
                               key={node.fields.slug}>{node.frontmatter.label ? node.frontmatter.label : node.frontmatter.title}</Link>
                     ])) : []
                 }
-            </div>, <CardTitle title={data.markdownRemark.frontmatter.title}/>]
+            </div>, <CardTitle title={data.markdownRemark.frontmatter.title} key='title'/>]
     }
 }
 
@@ -86,31 +87,46 @@ export default ({data}) => {
                 {header(data)}
                 <CardText>
                     <div dangerouslySetInnerHTML={{__html: post.html}}/>
-                    {navigation(post.frontmatter)}
+                    {navigation(data)}
                 </CardText>
             </Card>
 
             <Grid>
-                {getNavList(data, post.fields.slug, post.fields.level)}
+                {getNavList(data, post.fields.slug)}
             </Grid>
         </div>
     );
 };
 
 export const query = graphql`
-  query PageDataQuery($slug: String!, $resolved_slug: String!, $parent_regex: String!) {
+  query PageDataQuery($slug: String!, $resolved_slug: String!, $parent_regex: String!, $prev: String!, $next: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
         title
         label
-        up
-        prev
-        next
       }
       fields {
         slug
         level
+      }
+    }
+    prev: markdownRemark(fields: { slug: { eq: $prev } }) {
+      frontmatter {
+        title
+        label
+      }
+      fields {
+        slug
+      }
+    }
+    next: markdownRemark(fields: { slug: { eq: $next } }) {
+      frontmatter {
+        title
+        label
+      }
+      fields {
+        slug
       }
     }
       imageSharp(

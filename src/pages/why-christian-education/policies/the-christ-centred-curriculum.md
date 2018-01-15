@@ -1,9 +1,5 @@
 ---
 title: The Christ-Centred Curriculum
-slug: why-christian-education/policies/the-christ-centred-curriculum
-prev: /why-christian-education/policies/a-scriptural-background-to-christian-education/
-up: /why-christian-education/policies/
-next: /why-christian-education/policies/teaching-and-learning/
 index: 2
 ---
 

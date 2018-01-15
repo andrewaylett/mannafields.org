@@ -1,6 +1,5 @@
 ---
 title: Testimonies
-slug: "why-christian-education/testimonies"
 index: 21
 ---
 

@@ -1,9 +1,5 @@
 ---
 title: Language
-slug: why-christian-education/policies/language
-prev: /why-christian-education/policies/maths/
-next: /why-christian-education/policies/arts/
-up: /why-christian-education/policies/
 index: 5
 ---
 

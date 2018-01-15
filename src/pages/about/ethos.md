@@ -1,7 +1,6 @@
 ---
 title: Ethos
 index: 11
-slug: about/ethos
 ---
 
 We are a school where God and His Word take central place. We seek to know God’s Word and God’s world. After all, creation is held together in Christ, so no subject – scientific or artistic – can be separated from His revelation of Himself.

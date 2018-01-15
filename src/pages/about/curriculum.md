@@ -1,7 +1,6 @@
 ---
 title: Curriculum
 index: 12
-slug: about/curriculum
 ---
 
 We have a clear Christian philosophy of education, which acknowledges God as the ultimate source of all subjects, wisdom and understanding. Pupils are shown how God’s Word is relevant to all areas of learning, life and experience, gradually building a Christ-like world-view which will help them to handle an increasingly secularised world.

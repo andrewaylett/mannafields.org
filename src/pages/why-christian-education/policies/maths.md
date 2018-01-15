@@ -1,9 +1,5 @@
 ---
 title: Maths
-slug: why-christian-education/policies/maths
-prev: /why-christian-education/policies/teaching-and-learning/
-next: /why-christian-education/policies/language/
-up: /why-christian-education/policies/
 index: 4
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: Term Dates 2017/18
-slug: parents/term-dates
 index: 31
 ---
 

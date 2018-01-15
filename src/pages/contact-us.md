@@ -1,6 +1,5 @@
 ---
 title: Contact
-slug: contact-us
 index: 99
 ---
 

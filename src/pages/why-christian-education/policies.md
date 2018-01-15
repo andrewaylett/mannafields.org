@@ -1,7 +1,6 @@
 ---
 title: Mannafields Positions on Christian Education
 label: Policy Statements
-slug: why-christian-education/policies
 index: 22
 ---
 
