@@ -1,6 +1,4 @@
 module.exports = {
-    // Note: it must *not* have a trailing slash.
-    pathPrefix: '/mf-website',
     plugins: [
         {
             resolve: `gatsby-plugin-manifest`,
