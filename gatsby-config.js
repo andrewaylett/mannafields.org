@@ -24,11 +24,5 @@ module.exports = {
         'gatsby-transformer-sharp',
         'gatsby-plugin-catch-links',
         'gatsby-plugin-sass',
-        {
-            resolve: 'gatsby-plugin-typography',
-            options: {
-                pathToConfigModule: 'src/utils/typography',
-            },
-        },
     ]
 };

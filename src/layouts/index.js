@@ -12,9 +12,11 @@ import NavigationDrawer from 'react-md/lib/NavigationDrawers';
 
 import module from './index.module.scss';
 
-import 'react-md/src/scss/_react-md.scss'
-import 'react-md/dist/react-md.blue-light_blue.min.css'
-import 'react-md/src/scss/_typography.scss'
+import 'react-md/src/scss/_react-md.scss';
+import 'react-md/dist/react-md.blue-light_blue.min.css';
+import 'react-md/src/scss/_typography.scss';
+
+import './main.css';
 
 import {ChipLink, ChipA} from '../components/Chips';
 
