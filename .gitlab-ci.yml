@@ -8,7 +8,7 @@ cache:
 
 pages:
   script:
-  - yarn install
+  - npm install
   - ./node_modules/.bin/gatsby build
   artifacts:
     paths:
