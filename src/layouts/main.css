@@ -1,4 +1,5 @@
 body {
     background: rgb(87, 127, 152) url(../images/glossy-light-blue.png) no-repeat fixed top;
-    width: 100%;
+    margin: 0;
+    padding: 0;
 }
