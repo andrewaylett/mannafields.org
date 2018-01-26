@@ -8,7 +8,7 @@ module.exports = {
                 start_url: "/",
                 background_color: "#2f4f63",
                 theme_color: "#2f4f63",
-                display: "browser",
+                display: "minimal-ui",
                 icons: [
                     {
                         // Everything in /static will be copied to an equivalent
