@@ -1,4 +1,7 @@
 module.exports = {
+    siteMetadata: {
+        siteUrl: `https://www.mannafields.org`,
+    },
     plugins: [
         {
             resolve: `gatsby-plugin-manifest`,
@@ -52,5 +55,6 @@ module.exports = {
         'gatsby-transformer-sharp',
         'gatsby-plugin-catch-links',
         'gatsby-plugin-sass',
+        'gatsby-plugin-sitemap',
     ]
 };
