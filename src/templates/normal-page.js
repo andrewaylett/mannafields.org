@@ -3,19 +3,32 @@ import Helmet from 'react-helmet';
 
 import {Card, CardText, CardTitle} from 'react-md/lib/Cards';
 import {Grid, Cell} from 'react-md/lib/Grids';
-import {FontIcon} from 'react-md/lib/FontIcons';
 import {Avatar} from 'react-md/lib/Avatars';
 import {ChipLink} from '../components/Chips';
 import {Media, MediaOverlay} from 'react-md/lib/Media';
 import Img from 'gatsby-image';
 
+import {MdArrowBack, MdArrowUpward, MdArrowForward} from 'react-icons/lib/md';
+
 import module from './normalpage.module.css';
 import Link from "gatsby-link";
+
+function arrow(direction) {
+    if (direction === 'back') {
+        return <MdArrowBack/>;
+    }
+    if (direction === 'upward') {
+        return <MdArrowUpward/>;
+    }
+    if (direction === 'forward') {
+        return <MdArrowForward/>;
+    }
+}
 
 function maybeLink(node, direction) {
     if (node) {
         return <ChipLink to={node.fields.slug}
-                         avatar={<Avatar icon={<FontIcon>arrow_{direction}</FontIcon>}/>}
+                         avatar={<Avatar icon={arrow(direction)}/>}
                          label={node.frontmatter.label ? node.frontmatter.label : node.frontmatter.title}/>;
     }
 }
