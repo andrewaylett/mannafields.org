@@ -39,12 +39,19 @@
   width: 100%;
 }
 
+.hamburger {
+  font-size: 24px;
+}
+
+.home {
+  color: rgba(0,0,0,.54);
+  font-size: 20px;
+}
+
 .icon {
   fill: rgb(245, 245, 245);
 }
 
-
-@import url('https://fonts.googleapis.com/css?family=Material+Icons');
 @import '~react-md/src/scss/react-md';
 
 @include react-md-everything;

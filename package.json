@@ -23,6 +23,7 @@
     "mdi-react": "^2.1.19",
     "react-burger-menu": "^2.2.3",
     "react-helmet": "^5.2.0",
+    "react-icons": "^2.2.7",
     "react-md": "^1.2.11",
     "typeface-roboto": "0.0.54"
   },
