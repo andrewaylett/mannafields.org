@@ -16,6 +16,8 @@ import 'react-md/src/scss/_react-md.scss';
 import 'react-md/dist/react-md.blue-light_blue.min.css';
 import 'react-md/src/scss/_typography.scss';
 
+import 'typeface-roboto';
+
 import './main.css';
 
 import {ChipLink, ChipA} from '../components/Chips';
