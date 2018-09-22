@@ -59,7 +59,7 @@ const openDay = () => (Date.now() < new Date('2018-10-07')) ? <Card>
     <CardTitle title={'Open Day: 6th October 2018'}/>
     <CardText>
         <p>
-            Come an visit the school for our open day: 6th October 2018, 1-3pm in the school.
+            Come and visit the school for our open day: 6th October 2018, 1-3pm in the school.
         </p>
     </CardText>
 </Card> : [];
