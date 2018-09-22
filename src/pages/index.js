@@ -55,6 +55,15 @@ function cards(data) {
     );
 }
 
+const openDay = () => (Date.now() < new Date('2018-10-07')) ? <Card>
+    <CardTitle title={'Open Day: 6th October 2018'}/>
+    <CardText>
+        <p>
+            Come an visit the school for our open day: 6th October 2018, 1-3pm in the school.
+        </p>
+    </CardText>
+</Card> : [];
+
 export default ({data}) => (
     <div>
         <Helmet>
@@ -69,6 +78,7 @@ export default ({data}) => (
         <Grid>
             {cards(data)}
         </Grid>
+        {openDay()}
     </div>
 );
 
