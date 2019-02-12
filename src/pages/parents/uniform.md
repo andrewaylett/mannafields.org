@@ -1,6 +1,6 @@
 ---
 title: Uniform
-index: 33
+index: 39
 ---
 
 We find that a uniform encourages the children’s pride in their appearance, helps their self-image, eliminates competition, provides a sense of community and belonging, and works out cheaper for parents.
