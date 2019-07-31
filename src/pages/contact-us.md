@@ -7,10 +7,9 @@ The school postal address is:
 
 > MCEA Secretary \
   Mannafields Christian School \
-  170 Easter Road \
+  Unit B12, St Margaret's House \
+  151 London Road \
   Edinburgh \
-  EH7 5QE
-
-Tel: <a href="tel:+441316595602">(+44) 131 659 5602</a>
+  EH7 6AE
 
 Email: <a href="mailto:info@mannafields.org">info@mannafields.org</a>
