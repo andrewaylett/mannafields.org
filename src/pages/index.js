@@ -71,7 +71,7 @@ export default ({data}) => (
         </Helmet>
         <Card>
             <CardText>
-                <p>Located in central Edinburgh, on Easter Road, Mannafields Christian School provides high quality
+                <p>Located in central Edinburgh, Mannafields Christian School provides high quality
                     primary and secondary education from a Christ-centred perspective.</p>
             </CardText>
         </Card>
