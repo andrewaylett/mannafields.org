@@ -21,14 +21,14 @@
     "gatsby-transformer-remark": "^1.7.44",
     "gatsby-transformer-sharp": "^1.6.27",
     "mdi-react": "^2.1.19",
-    "react-burger-menu": "^2.6.4",
-    "react-helmet": "^5.2.0",
+    "react-burger-menu": "^2.6.11",
+    "react-helmet": "^5.2.1",
     "react-icons": "^2.2.7",
-    "react-md": "^1.9.2",
+    "react-md": "^1.12.3",
     "typeface-roboto": "0.0.54"
   },
   "devDependencies": {
-    "source-map-explorer": "^1.6.0"
+    "source-map-explorer": "^1.8.0"
   },
   "browserslist": [
     ">1%",
