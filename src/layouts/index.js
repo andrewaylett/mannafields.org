@@ -82,8 +82,8 @@ export default ({children, data}) => {
                     <ChipLink to='/contact-us/'
                               avatar={<Avatar icon={<MdSchool/>}/>}
                               label='Contact Us'/>
-                    <ChipA to='tel:+441316595602' avatar={<Avatar icon={<MdPhone/>}/>}
-                           label='(+44) 131 659 5602'/>
+                    <ChipA to='tel:+441315163221' avatar={<Avatar icon={<MdPhone/>}/>}
+                           label='(+44) 131 516 3221'/>
                     <ChipA to='mailto:info@mannafields.org'
                            avatar={<Avatar icon={<MdEmail/>}/>}
                            label='info@mannafields.org'/>
