@@ -55,11 +55,11 @@ function cards(data) {
     );
 }
 
-const openDay = () => (Date.now() < new Date('2018-10-07')) ? <Card>
+const openDay = () => (Date.now() < new Date('2019-10-27')) ? <Card>
     <CardTitle title={'Open Day: 6th October 2018'}/>
     <CardText>
         <p>
-            Come and visit the school for our open day: 6th October 2018, 1-3pm in the school.
+            Come and visit the school for our open day: 26th October 2019, 1-3pm in the school.
         </p>
     </CardText>
 </Card> : [];

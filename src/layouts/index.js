@@ -95,7 +95,7 @@ export default ({children, data}) => {
                            label='@mannafields'/>
                 </div>
                 <div className={module.bottom}>
-                    Copyright &copy; 2004-2017 Mannafields Christian Education Association. Scottish Charity No.
+                    Copyright &copy; 2004-2019 Mannafields Christian Education Association. Scottish Charity No.
                     SC006202
                 </div>
             </div>
