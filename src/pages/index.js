@@ -55,24 +55,6 @@ function cards(data) {
     );
 }
 
-const openingDay = () => (Date.now() < new Date('2019-10-20')) ? <Card>
-    <CardTitle title={'New Building Opening Celebration: 19th September 2019'}/>
-    <CardText>
-        <p>
-            Please join us in celebrating all that God's done for the school over the last few months in giving us our new building, 19th September 2019, 6:30pm in the school.
-        </p>
-    </CardText>
-</Card> : [];
-
-const openDay = () => (Date.now() < new Date('2019-10-27')) ? <Card>
-    <CardTitle title={'Open Day: 26th October 2019'}/>
-    <CardText>
-        <p>
-            Come and visit the school for our open day: 26th October 2019, 1-3pm in the school.
-        </p>
-    </CardText>
-</Card> : [];
-
 export default ({data}) => (
     <div>
         <Helmet>
@@ -87,8 +69,6 @@ export default ({data}) => (
         <Grid>
             {cards(data)}
         </Grid>
-        {openingDay()}
-        {openDay()}
     </div>
 );
 
