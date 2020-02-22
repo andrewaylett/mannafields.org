@@ -1,116 +1,115 @@
-import React from "react";
+import React from 'react';
 import Helmet from 'react-helmet';
 
-import {graphql} from "gatsby";
+import { graphql } from 'gatsby';
 
-import {Card, CardText, CardTitle} from 'react-md/lib/Cards';
-import {Grid, Cell} from 'react-md/lib/Grids';
-import {Avatar} from 'react-md/lib/Avatars';
-import {ChipLink} from '../components/Chips';
-import {Media, MediaOverlay} from 'react-md/lib/Media';
+import { Card, CardText, CardTitle } from 'react-md/lib/Cards';
+import { Grid, Cell } from 'react-md/lib/Grids';
+import { Avatar } from 'react-md/lib/Avatars';
+import { ChipLink } from '../components/Chips';
+import { Media, MediaOverlay } from 'react-md/lib/Media';
 import Img from 'gatsby-image';
 
-import {MdArrowBack, MdArrowUpward, MdArrowForward} from 'react-icons/md';
+import { MdArrowBack, MdArrowUpward, MdArrowForward } from 'react-icons/md';
 
 import module from './normalpage.module.css';
-import Link from "gatsby-link";
+import Link from 'gatsby-link';
 
-function arrow(direction) {
-    if (direction === 'back') {
-        return <MdArrowBack/>;
-    }
-    if (direction === 'upward') {
-        return <MdArrowUpward/>;
-    }
-    if (direction === 'forward') {
-        return <MdArrowForward/>;
-    }
+function arrow (direction) {
+  if (direction === 'back') {
+    return <MdArrowBack/>;
+  }
+  if (direction === 'upward') {
+    return <MdArrowUpward/>;
+  }
+  if (direction === 'forward') {
+    return <MdArrowForward/>;
+  }
 }
 
-function maybeLink(node, direction) {
-    if (node) {
-        return <ChipLink to={node.fields.slug}
-                         avatar={<Avatar icon={arrow(direction)}/>}
-                         label={node.frontmatter.label ? node.frontmatter.label : node.frontmatter.title}/>;
-    }
+function maybeLink (node, direction) {
+  if (node) {
+    return <ChipLink to={node.fields.slug}
+      avatar={<Avatar icon={arrow(direction)}/>}
+      label={node.frontmatter.label ? node.frontmatter.label : node.frontmatter.title}/>;
+  }
 }
 
-function navigation({prev, next, markdownRemark, parents}) {
-    if (markdownRemark.fields.level >= 3) {
-        const parent = parents.edges[parents.edges.length-1].node;
-        return <Grid>
-            <Cell className={module.cell} size={4}>{maybeLink(prev, 'back')}</Cell>
-            <Cell className={module.cell} size={4}>{maybeLink(parent, 'upward')}</Cell>
-            <Cell className={module.cell} size={4}>{maybeLink(next, 'forward')}</Cell>
-        </Grid>
-    }
+function navigation ({ prev, next, markdownRemark, parents }) {
+  if (markdownRemark.fields.level >= 3) {
+    const parent = parents.edges[parents.edges.length - 1].node;
+    return <Grid>
+      <Cell className={module.cell} size={4}>{maybeLink(prev, 'back')}</Cell>
+      <Cell className={module.cell} size={4}>{maybeLink(parent, 'upward')}</Cell>
+      <Cell className={module.cell} size={4}>{maybeLink(next, 'forward')}</Cell>
+    </Grid>;
+  }
 }
 
-function header(data) {
-    if (data.imageSharp) {
-        return <Media>
-            <Img sizes={data.imageSharp.sizes}/>
-            <div className={module.breadcrumbs_block}>
-                <Link to='/'>Home</Link>
-                {
-                    data.parents ? data.parents.edges.map(({node}) => (
-                        <Link to={node.fields.slug}
-                              key={node.fields.slug}>{node.frontmatter.label ? node.frontmatter.label : node.frontmatter.title}</Link>
-                    )) : []
-                }
-            </div>
-            <MediaOverlay>
-                <CardTitle title={data.markdownRemark.frontmatter.title}/>
-            </MediaOverlay>
-        </Media>;
-    } else {
-        return [
-            <div className={module.breadcrumbs_inline} key='breadcrumbs'>
-                <Link to='/'>Home</Link>
-                {
-                    data.parents ? data.parents.edges.map(({node}) => ([
-                        <span> > </span>,
-                        <Link to={node.fields.slug}
-                              key={node.fields.slug}>{node.frontmatter.label ? node.frontmatter.label : node.frontmatter.title}</Link>
-                    ])) : []
-                }
-            </div>, <CardTitle title={data.markdownRemark.frontmatter.title} key='title'/>]
-    }
+function header (data) {
+  if (data.imageSharp) {
+    return <Media>
+      <Img sizes={data.imageSharp.sizes}/>
+      <div className={module.breadcrumbs_block}>
+        <Link to='/'>Home</Link>
+        {
+          data.parents ? data.parents.edges.map(({ node }) => (
+            <Link to={node.fields.slug}
+              key={node.fields.slug}>{node.frontmatter.label ? node.frontmatter.label : node.frontmatter.title}</Link>
+          )) : []
+        }
+      </div>
+      <MediaOverlay>
+        <CardTitle title={data.markdownRemark.frontmatter.title}/>
+      </MediaOverlay>
+    </Media>;
+  } else {
+    return [
+      <div className={module.breadcrumbs_inline} key='breadcrumbs'>
+        <Link to='/'>Home</Link>
+        {
+          data.parents ? data.parents.edges.map(({ node }) => ([
+            <span> > </span>,
+            <Link to={node.fields.slug}
+              key={node.fields.slug}>{node.frontmatter.label ? node.frontmatter.label : node.frontmatter.title}</Link>
+          ])) : []
+        }
+      </div>, <CardTitle title={data.markdownRemark.frontmatter.title} key='title'/>];
+  }
 }
 
-
-function getNavList(query) {
-    const edges = query.allMarkdownRemark ? query.allMarkdownRemark.edges : [];
-    return edges.map(({node}) => (
-        <Link to={node.fields.slug} className={Cell.getClassName({size: 4})} key={node.fields.slug}>
-            <Card className={module.card_link}>
-                <CardTitle title={node.frontmatter.label ? node.frontmatter.label : node.frontmatter.title}/>
-            </Card>
-        </Link>
-    ));
+function getNavList (query) {
+  const edges = query.allMarkdownRemark ? query.allMarkdownRemark.edges : [];
+  return edges.map(({ node }) => (
+    <Link to={node.fields.slug} className={Cell.getClassName({ size: 4 })} key={node.fields.slug}>
+      <Card className={module.card_link}>
+        <CardTitle title={node.frontmatter.label ? node.frontmatter.label : node.frontmatter.title}/>
+      </Card>
+    </Link>
+  ));
 }
 
-export default ({data}) => {
-    const post = data.markdownRemark;
-    return (
-        <div>
-            <Card>
-                <Helmet>
-                    <title>{post.frontmatter.label ? post.frontmatter.label : post.frontmatter.title} | Mannafields
+export default ({ data }) => {
+  const post = data.markdownRemark;
+  return (
+    <div>
+      <Card>
+        <Helmet>
+          <title>{post.frontmatter.label ? post.frontmatter.label : post.frontmatter.title} | Mannafields
                         Christian School</title>
-                </Helmet>
-                {header(data)}
-                <CardText>
-                    <div dangerouslySetInnerHTML={{__html: post.html}}/>
-                    {navigation(data)}
-                </CardText>
-            </Card>
+        </Helmet>
+        {header(data)}
+        <CardText>
+          <div dangerouslySetInnerHTML={{ __html: post.html }}/>
+          {navigation(data)}
+        </CardText>
+      </Card>
 
-            <Grid>
-                {getNavList(data, post.fields.slug)}
-            </Grid>
-        </div>
-    );
+      <Grid>
+        {getNavList(data, post.fields.slug)}
+      </Grid>
+    </div>
+  );
 };
 
 export const query = graphql`
@@ -195,4 +194,3 @@ export const query = graphql`
 	}
   }
 `;
-

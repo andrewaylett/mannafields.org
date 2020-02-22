@@ -1,76 +1,76 @@
-import React from "react";
+import React from 'react';
 import Helmet from 'react-helmet';
 
-import {graphql} from "gatsby";
+import { graphql } from 'gatsby';
 import Link from 'gatsby-link';
 import Img from 'gatsby-image';
 
-import {Card, CardTitle, CardText} from 'react-md/lib/Cards';
-import {Grid, Cell} from 'react-md/lib/Grids';
-import {Media, MediaOverlay} from 'react-md/lib/Media';
+import { Card, CardTitle, CardText } from 'react-md/lib/Cards';
+import { Grid, Cell } from 'react-md/lib/Grids';
+import { Media, MediaOverlay } from 'react-md/lib/Media';
 
-function imageSizes(data, for_page) {
-    for (let edge of data.allImageSharp.edges) {
-        let node = edge.node;
-        if (node.fields.matching_page === for_page) {
-            return node.sizes;
-        }
+function imageSizes (data, for_page) {
+  for (const edge of data.allImageSharp.edges) {
+    const node = edge.node;
+    if (node.fields.matching_page === for_page) {
+      return node.sizes;
     }
-    return null;
+  }
+  return null;
 }
 
-function mediaForPage(data, node) {
-    let text = node.frontmatter.label ? node.frontmatter.label : node.frontmatter.title;
-    let sizes = imageSizes(data, node.fields.slug);
-    if (sizes) {
-        return (
-            <Media>
-                <Img sizes={sizes}/>
-                <MediaOverlay>
-                    <CardTitle title={text}/>
-                </MediaOverlay>
-            </Media>
-        );
-    } else {
-        return (
-            <Media>
-                <MediaOverlay>
-                    <CardTitle title={text}/>
-                </MediaOverlay>
-            </Media>
-        );
-    }
-}
-
-function cardForPage(data, node) {
-    return <Card className={Cell.getClassName({side: 4})} key={node.fields.slug}>
-        <Link to={node.fields.slug}>
-            {mediaForPage(data, node)}
-        </Link>
-    </Card>;
-}
-
-function cards(data) {
-    return data.allMarkdownRemark.edges.map(
-        ({node}) => cardForPage(data, node)
+function mediaForPage (data, node) {
+  const text = node.frontmatter.label ? node.frontmatter.label : node.frontmatter.title;
+  const sizes = imageSizes(data, node.fields.slug);
+  if (sizes) {
+    return (
+      <Media>
+        <Img sizes={sizes}/>
+        <MediaOverlay>
+          <CardTitle title={text}/>
+        </MediaOverlay>
+      </Media>
     );
+  } else {
+    return (
+      <Media>
+        <MediaOverlay>
+          <CardTitle title={text}/>
+        </MediaOverlay>
+      </Media>
+    );
+  }
 }
 
-export default ({data}) => (
-    <div>
-        <Helmet>
-            <title>Mannafields Christian School</title>
-        </Helmet>
-        <Card>
-            <CardText>
-                <p>Located in central Edinburgh, Mannafields Christian School provides high quality
+function cardForPage (data, node) {
+  return <Card className={Cell.getClassName({ side: 4 })} key={node.fields.slug}>
+    <Link to={node.fields.slug}>
+      {mediaForPage(data, node)}
+    </Link>
+  </Card>;
+}
+
+function cards (data) {
+  return data.allMarkdownRemark.edges.map(
+    ({ node }) => cardForPage(data, node)
+  );
+}
+
+export default ({ data }) => (
+  <div>
+    <Helmet>
+      <title>Mannafields Christian School</title>
+    </Helmet>
+    <Card>
+      <CardText>
+        <p>Located in central Edinburgh, Mannafields Christian School provides high quality
                     primary and secondary education from a Christ-centred perspective.</p>
-            </CardText>
-        </Card>
-        <Grid>
-            {cards(data)}
-        </Grid>
-    </div>
+      </CardText>
+    </Card>
+    <Grid>
+      {cards(data)}
+    </Grid>
+  </div>
 );
 
 export const query = graphql`
