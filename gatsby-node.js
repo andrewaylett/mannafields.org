@@ -1,8 +1,8 @@
 const path = require(`path`);
 const {createFilePath} = require(`gatsby-source-filesystem`);
 
-exports.onCreateNode = ({node, getNode, boundActionCreators}) => {
-    const {createNodeField} = boundActionCreators;
+exports.onCreateNode = ({node, getNode, actions}) => {
+    const {createNodeField} = actions;
     if (node.internal.type === `MarkdownRemark`) {
         const slug = createFilePath({node, getNode, basePath: `pages`});
         let level = (slug.match(/\//g) || []).length - 1;
@@ -61,8 +61,8 @@ exports.onCreateNode = ({node, getNode, boundActionCreators}) => {
     }
 };
 
-exports.createPages = async ({graphql, boundActionCreators}) => {
-    const {createPage} = boundActionCreators;
+exports.createPages = async ({graphql, actions}) => {
+    const {createPage} = actions;
 
     const result = await graphql(`
       {

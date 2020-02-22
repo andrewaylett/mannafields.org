@@ -1,4 +1,4 @@
-image: node:10
+image: node:12
 
 # This folder is cached between builds
 # http://docs.gitlab.com/ce/ci/yaml/README.html#cache
@@ -14,7 +14,7 @@ stages:
 build:
   stage: build
   script:
-  - npm install
+  - npm ci
 
 include:
   - template: Dependency-Scanning.gitlab-ci.yml

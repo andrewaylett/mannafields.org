@@ -2,12 +2,14 @@ import React from 'react';
 
 import Helmet from 'react-helmet';
 
+import {StaticQuery, graphql} from "gatsby";
+
 import Link from 'gatsby-link';
 import Avatar from 'react-md/lib/Avatars';
 import TwitterBoxIcon from 'mdi-react/TwitterBoxIcon';
 import FacebookBoxIcon from 'mdi-react/FacebookBoxIcon';
 
-import {MdHome, MdSchool, MdPhone, MdEmail, MdMenu} from 'react-icons/lib/md';
+import {MdHome, MdSchool, MdPhone, MdEmail, MdMenu} from 'react-icons/md';
 
 import NavigationDrawer from 'react-md/lib/NavigationDrawers';
 
@@ -60,69 +62,70 @@ function getNavList(query) {
     return result;
 }
 
-export default ({children, data}) => {
-    // const pageData = getPageData(data);
-    return <div className={module.everything}>
-        <NavigationDrawer
-            toolbarTitle='Mannafields Christian School'
-            contentClassName="main-content"
-            navItems={getNavList(data)}
-            defaultMedia='mobile'
-            mobileDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY}
-            tabletDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY}
-            desktopDrawerType={NavigationDrawer.DrawerTypes.FULL_HEIGHT}
-            temporaryIcon={<MdMenu className={module.hamburger}/>}
-        >
-            <Helmet>
-                <link rel='icon' href='/favicons/logo-192x192.png' />
-            </Helmet>
-            <div className={module.wrapper}>
-                {children()}
-                <div className={module.main}>
-                    <ChipLink to='/contact-us/'
-                              avatar={<Avatar icon={<MdSchool/>}/>}
-                              label='Contact Us'/>
-                    <ChipA to='tel:+441315163221' avatar={<Avatar icon={<MdPhone/>}/>}
-                           label='(+44) 131 516 3221'/>
-                    <ChipA to='mailto:info@mannafields.org'
-                           avatar={<Avatar icon={<MdEmail/>}/>}
-                           label='info@mannafields.org'/>
-                    <ChipA to='https://www.facebook.com/MannafieldsChristianSchool'
-                           avatar={<Avatar icon={<FacebookBoxIcon className={module.icon}/>}/>}
-                           label='Facebook'/>
-                    <ChipA to='https://twitter.com/mannafields'
-                           avatar={<Avatar icon={<TwitterBoxIcon className={module.icon}/>}/>}
-                           label='@mannafields'/>
-                </div>
-                <div className={module.bottom}>
-                    Copyright &copy; 2004-2019 Mannafields Christian Education Association. Scottish Charity No.
-                    SC006202
-                </div>
-            </div>
-        </NavigationDrawer>
-    </div>
-};
-
-export const query = graphql`
-    query LayoutQuery {
-        file {
-            relativePath
-        }
-        allMarkdownRemark(
-            sort: { order: ASC, fields: [frontmatter___index] }
-        ) {
-            edges {
-                node {
-                    frontmatter {
-                        title
-                        index
-                        label
-                    }
-                    fields {
-                        slug
+export default ({children}) => {
+    return <StaticQuery
+        query={graphql`
+            query LayoutQuery {
+                file {
+                    relativePath
+                }
+                allMarkdownRemark(
+                    sort: { order: ASC, fields: [frontmatter___index] }
+                ) {
+                    edges {
+                        node {
+                            frontmatter {
+                                title
+                                index
+                                label
+                            }
+                            fields {
+                                slug
+                            }
+                        }
                     }
                 }
             }
-        }
-    }
-`;
+        `}
+        render={data =>
+            <div className={module.everything}>
+                <NavigationDrawer
+                    toolbarTitle='Mannafields Christian School'
+                    contentClassName="main-content"
+                    navItems={getNavList(data)}
+                    defaultMedia='mobile'
+                    mobileDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY}
+                    tabletDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY}
+                    desktopDrawerType={NavigationDrawer.DrawerTypes.FULL_HEIGHT}
+                    temporaryIcon={<MdMenu className={module.hamburger}/>}
+                >
+                    <Helmet>
+                        <link rel='icon' href='/favicons/logo-192x192.png'/>
+                    </Helmet>
+                    <div className={module.wrapper}>
+                        {children}
+                        <div className={module.main}>
+                            <ChipLink to='/contact-us/'
+                                      avatar={<Avatar icon={<MdSchool/>}/>}
+                                      label='Contact Us'/>
+                            <ChipA to='tel:+441315163221' avatar={<Avatar icon={<MdPhone/>}/>}
+                                   label='(+44) 131 516 3221'/>
+                            <ChipA to='mailto:info@mannafields.org'
+                                   avatar={<Avatar icon={<MdEmail/>}/>}
+                                   label='info@mannafields.org'/>
+                            <ChipA to='https://www.facebook.com/MannafieldsChristianSchool'
+                                   avatar={<Avatar icon={<FacebookBoxIcon className={module.icon}/>}/>}
+                                   label='Facebook'/>
+                            <ChipA to='https://twitter.com/mannafields'
+                                   avatar={<Avatar icon={<TwitterBoxIcon className={module.icon}/>}/>}
+                                   label='@mannafields'/>
+                        </div>
+                        <div className={module.bottom}>
+                            Copyright &copy; 2004-2020 Mannafields Christian Education Association. Scottish Charity No.
+                            SC006202
+                        </div>
+                    </div>
+                </NavigationDrawer>
+            </div>
+        }/>;
+}

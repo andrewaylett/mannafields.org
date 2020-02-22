@@ -6,7 +6,7 @@ import {Chip} from 'react-md/lib/Chips';
 
 import css_module from './chips.module.scss';
 
-class ChipLink extends React.Component {
+export class ChipLink extends React.Component {
     render() {
         return (
             <Link to={this.props.to} className={css_module.chip}>
@@ -17,7 +17,7 @@ class ChipLink extends React.Component {
     }
 }
 
-class ChipA extends React.Component {
+export class ChipA extends React.Component {
     render() {
         return (
             <a href={this.props.to} className={css_module.chip}>
@@ -27,8 +27,3 @@ class ChipA extends React.Component {
         );
     }
 }
-
-module.exports = {
-    'ChipLink': ChipLink,
-    'ChipA': ChipA,
-};
