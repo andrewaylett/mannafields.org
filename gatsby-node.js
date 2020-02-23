@@ -7,12 +7,12 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     const slug = createFilePath({ node, getNode, basePath: `pages` });
     const level = (slug.match(/\//g) || []).length - 1;
     const parent = path.resolve(slug, '..');
-    const resolved_slug = path.resolve(slug);
+    const resolvedSlug = path.resolve(slug);
 
     let str = '';
-    const component_array = resolved_slug.split('/');
-    component_array.pop();
-    component_array.map((x) => (x + '\\/')).reverse().map((elem) => { str = '(' + elem + str + ')?'; });
+    const componentArray = resolvedSlug.split('/');
+    componentArray.pop();
+    componentArray.map((x) => (x + '\\/')).reverse().map((elem) => { str = '(' + elem + str + ')?'; });
     str = '/^' + str + '$/';
     console.log(str);
 
@@ -39,14 +39,14 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     createNodeField({
       node,
       name: `resolved_slug`,
-      value: resolved_slug
+      value: resolvedSlug
     });
   }
 
   if (node.internal.type === 'ImageSharp') {
     const slug = createFilePath({ node, getNode, basePath: `images/pages` });
     const level = (slug.match(/\//g) || []).length - 1;
-    const matching_page = slug.replace(/\..*$/, '/');
+    const matchingPage = slug.replace(/\..*$/, '/');
     createNodeField({
       node,
       name: 'level',
@@ -55,7 +55,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     createNodeField({
       node,
       name: 'matching_page',
-      value: matching_page
+      value: matchingPage
     });
   }
 };

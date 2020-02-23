@@ -1,6 +1,8 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 
+import PropTypes from 'prop-types';
+
 import { graphql } from 'gatsby';
 import Link from 'gatsby-link';
 import Img from 'gatsby-image';
@@ -9,10 +11,10 @@ import { Card, CardTitle, CardText } from 'react-md/lib/Cards';
 import { Grid, Cell } from 'react-md/lib/Grids';
 import { Media, MediaOverlay } from 'react-md/lib/Media';
 
-function imageSizes (data, for_page) {
+function imageSizes (data, forPage) {
   for (const edge of data.allImageSharp.edges) {
     const node = edge.node;
-    if (node.fields.matching_page === for_page) {
+    if (node.fields.matching_page === forPage) {
       return node.sizes;
     }
   }
@@ -56,7 +58,7 @@ function cards (data) {
   );
 }
 
-export default ({ data }) => (
+const Page = ({ data }) => (
   <div>
     <Helmet>
       <title>Mannafields Christian School</title>
@@ -72,6 +74,12 @@ export default ({ data }) => (
     </Grid>
   </div>
 );
+
+Page.propTypes = {
+  data: PropTypes.object
+};
+
+export default Page;
 
 export const query = graphql`
   query IndexImageSampleQuery {

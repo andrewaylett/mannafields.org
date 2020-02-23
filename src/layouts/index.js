@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Helmet from 'react-helmet';
 
@@ -62,7 +63,7 @@ function getNavList (query) {
   return result;
 }
 
-export default ({ children }) => {
+const Layout = ({ children }) => {
   return <StaticQuery
     query={graphql`
             query LayoutQuery {
@@ -121,11 +122,17 @@ export default ({ children }) => {
                 label='@mannafields'/>
             </div>
             <div className={module.bottom}>
-                            Copyright &copy; 2004-2020 Mannafields Christian Education Association. Scottish Charity No.
-                            SC006202
+              Copyright &copy; 2004-2020 Mannafields Christian Education Association. Scottish Charity No.
+              SC006202
             </div>
           </div>
         </NavigationDrawer>
       </div>
     }/>;
 };
+
+Layout.propTypes = {
+  children: PropTypes.element.isRequired
+};
+
+export default Layout;

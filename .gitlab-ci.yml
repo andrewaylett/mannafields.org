@@ -4,7 +4,7 @@ image: node:12
 # http://docs.gitlab.com/ce/ci/yaml/README.html#cache
 cache:
   paths:
-  - node_modules/
+    - node_modules/
 
 stages:
   - build
@@ -14,17 +14,24 @@ stages:
 build:
   stage: build
   script:
-  - npm ci
+    - npm ci
+    - npm run lint
+    - npm run build
+  artifacts:
+    paths:
+      - public
 
 include:
   - template: Dependency-Scanning.gitlab-ci.yml
 
 pages:
   stage: deploy
+  dependencies:
+    - build
   script:
-  - ./node_modules/.bin/gatsby build
+    - echo "Publishing results of build"
   artifacts:
     paths:
-    - public
+      - public
   only:
-  - master
+    - master

@@ -1,5 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import PropTypes from 'prop-types';
 
 import { graphql } from 'gatsby';
 
@@ -69,7 +70,7 @@ function header (data) {
         <Link to='/'>Home</Link>
         {
           data.parents ? data.parents.edges.map(({ node }) => ([
-            <span> > </span>,
+            <span key='span'> &gt; </span>,
             <Link to={node.fields.slug}
               key={node.fields.slug}>{node.frontmatter.label ? node.frontmatter.label : node.frontmatter.title}</Link>
           ])) : []
@@ -89,14 +90,14 @@ function getNavList (query) {
   ));
 }
 
-export default ({ data }) => {
+const NormalPage = ({ data }) => {
   const post = data.markdownRemark;
   return (
     <div>
       <Card>
         <Helmet>
           <title>{post.frontmatter.label ? post.frontmatter.label : post.frontmatter.title} | Mannafields
-                        Christian School</title>
+            Christian School</title>
         </Helmet>
         {header(data)}
         <CardText>
@@ -111,6 +112,23 @@ export default ({ data }) => {
     </div>
   );
 };
+
+NormalPage.propTypes = {
+  data: PropTypes.shape({
+    markdownRemark: PropTypes.shape({
+      frontmatter: PropTypes.shape({
+        label: PropTypes.string,
+        title: PropTypes.string.isRequired
+      }).isRequired,
+      html: PropTypes.string.isRequired,
+      fields: PropTypes.shape({
+        slug: PropTypes.string.isRequired
+      }).isRequired
+    }).isRequired
+  }).isRequired
+};
+
+export default NormalPage;
 
 export const query = graphql`
   query PageDataQuery($slug: String!, $resolved_slug: String!, $parent_regex: String!, $prev: String!, $next: String!) {
@@ -176,21 +194,21 @@ export const query = graphql`
       }
       parents: allMarkdownRemark (
       filter: {fields: {slug: {regex: $parent_regex }}}) {
-	  edges {
-	    node {
-	      fields {
-	        slug
-	        level
-	        parent
-	        resolved_slug
+    edges {
+      node {
+        fields {
+          slug
+          level
+          parent
+          resolved_slug
           parent_regex
           }
           frontmatter {
               label
               title
-	      }
-	    }
-	  }
-	}
+        }
+      }
+    }
+  }
   }
 `;
