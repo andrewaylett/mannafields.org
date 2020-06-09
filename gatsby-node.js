@@ -1,10 +1,10 @@
-const path = require(`path`);
-const { createFilePath } = require(`gatsby-source-filesystem`);
+const path = require('path');
+const { createFilePath } = require('gatsby-source-filesystem');
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
-  if (node.internal.type === `MarkdownRemark`) {
-    const slug = createFilePath({ node, getNode, basePath: `pages` });
+  if (node.internal.type === 'MarkdownRemark') {
+    const slug = createFilePath({ node, getNode, basePath: 'pages' });
     const level = (slug.match(/\//g) || []).length - 1;
     const parent = path.resolve(slug, '..');
     const resolvedSlug = path.resolve(slug);
@@ -23,28 +23,28 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     });
     createNodeField({
       node,
-      name: `slug`,
+      name: 'slug',
       value: slug
     });
     createNodeField({
       node,
-      name: `level`,
+      name: 'level',
       value: level
     });
     createNodeField({
       node,
-      name: `parent`,
+      name: 'parent',
       value: parent
     });
     createNodeField({
       node,
-      name: `resolved_slug`,
+      name: 'resolved_slug',
       value: resolvedSlug
     });
   }
 
   if (node.internal.type === 'ImageSharp') {
-    const slug = createFilePath({ node, getNode, basePath: `images/pages` });
+    const slug = createFilePath({ node, getNode, basePath: 'images/pages' });
     const level = (slug.match(/\//g) || []).length - 1;
     const matchingPage = slug.replace(/\..*$/, '/');
     createNodeField({
@@ -102,7 +102,7 @@ exports.createPages = async ({ graphql, actions }) => {
   }, new Map());
 
   edges.forEach(({ node }) => {
-    const component = path.resolve(`./src/templates/normal-page.js`);
+    const component = path.resolve('./src/templates/normal-page.js');
     const context = {
       // Data passed to context is available in page queries as GraphQL variables.
       slug: node.fields.slug,

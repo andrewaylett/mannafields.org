@@ -7,8 +7,8 @@ import { StaticQuery, graphql } from 'gatsby';
 
 import Link from 'gatsby-link';
 import Avatar from 'react-md/lib/Avatars';
-import TwitterBoxIcon from 'mdi-react/TwitterBoxIcon';
-import FacebookBoxIcon from 'mdi-react/FacebookBoxIcon';
+import TwitterIcon from 'mdi-react/TwitterIcon';
+import FacebookIcon from 'mdi-react/FacebookIcon';
 
 import { MdHome, MdSchool, MdPhone, MdEmail, MdMenu } from 'react-icons/md';
 
@@ -115,10 +115,10 @@ const Layout = ({ children }) => {
                 avatar={<Avatar icon={<MdEmail/>}/>}
                 label='info@mannafields.org'/>
               <ChipA to='https://www.facebook.com/MannafieldsChristianSchool'
-                avatar={<Avatar icon={<FacebookBoxIcon className={module.icon}/>}/>}
+                avatar={<Avatar icon={<FacebookIcon className={module.icon}/>}/>}
                 label='Facebook'/>
               <ChipA to='https://twitter.com/mannafields'
-                avatar={<Avatar icon={<TwitterBoxIcon className={module.icon}/>}/>}
+                avatar={<Avatar icon={<TwitterIcon className={module.icon}/>}/>}
                 label='@mannafields'/>
             </div>
             <div className={module.bottom}>

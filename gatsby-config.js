@@ -1,10 +1,10 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://www.mannafields.org`
+    siteUrl: 'https://www.mannafields.org'
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'Mannafields Christian School',
         short_name: 'Mannafields',
@@ -18,23 +18,23 @@ module.exports = {
             // directory in /public during development and build, so
             // assuming your favicons are in /static/favicons,
             // you can reference them here
-            src: `/favicons/logo-192x192.png`,
-            sizes: `192x192`,
-            type: `image/png`
+            src: '/favicons/logo-192x192.png',
+            sizes: '192x192',
+            type: 'image/png'
           },
           {
-            src: `/favicons/logo-512x512.png`,
-            sizes: `512x512`,
-            type: `image/png`
+            src: '/favicons/logo-512x512.png',
+            sizes: '512x512',
+            type: 'image/png'
           }
         ]
       }
     },
     'gatsby-plugin-offline',
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `src`,
+        name: 'src',
         path: `${__dirname}/src/`
       }
     },
