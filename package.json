@@ -36,7 +36,7 @@
     "react-dom": "^16.14.0",
     "react-helmet": "^6.1.0",
     "react-icons": "^3.11.0",
-    "react-md": "^1.18.1",
+    "react-md": "^2.8.3",
     "typeface-roboto": "^0.0.75",
     "typescript": "^3.9.9"
   },
