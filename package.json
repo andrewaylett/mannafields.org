@@ -38,7 +38,7 @@
     "react-icons": "4.2.0",
     "react-md": "1.18.1",
     "typeface-roboto": "1.1.13",
-    "typescript": "3.9.9"
+    "typescript": "3.9.10"
   },
   "devDependencies": {
     "eslint": "7.27.0",
