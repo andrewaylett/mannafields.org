@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   siteMetadata: {
     siteUrl: 'https://www.mannafields.org'
@@ -30,12 +32,19 @@ module.exports = {
         ]
       }
     },
+    {
+      resolve: 'gatsby-plugin-plausible',
+      options: {
+        domain: 'mannafields.org',
+        customDomain: 'www.mannafields.org'
+      }
+    },
     'gatsby-plugin-offline',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'src',
-        path: `${__dirname}/src/`
+        path: path.resolve(__dirname, 'src/')
       }
     },
     {
