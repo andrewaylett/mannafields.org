@@ -12,7 +12,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     let str = '';
     const componentArray = resolvedSlug.split('/');
     componentArray.pop();
-    componentArray.map((x) => (x + '\\/')).reverse().map((elem) => { str = '(' + elem + str + ')?'; });
+    componentArray.map((x) => (x + '\\/')).reverse().forEach((elem) => { str = '(' + elem + str + ')?'; });
     str = '/^' + str + '$/';
     console.log(str);
 

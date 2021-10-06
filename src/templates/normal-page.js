@@ -54,10 +54,12 @@ function header (data) {
       <div className={module.breadcrumbs_block}>
         <Link to='/'>Home</Link>
         {
-          data.parents ? data.parents.edges.map(({ node }) => (
+          data.parents
+            ? data.parents.edges.map(({ node }) => (
             <Link to={node.fields.slug}
               key={node.fields.slug}>{node.frontmatter.label ? node.frontmatter.label : node.frontmatter.title}</Link>
-          )) : []
+            ))
+            : []
         }
       </div>
       <MediaOverlay>
@@ -69,11 +71,13 @@ function header (data) {
       <div className={module.breadcrumbs_inline} key='breadcrumbs'>
         <Link to='/'>Home</Link>
         {
-          data.parents ? data.parents.edges.map(({ node }) => ([
+          data.parents
+            ? data.parents.edges.map(({ node }) => ([
             <span key='span'> &gt; </span>,
             <Link to={node.fields.slug}
               key={node.fields.slug}>{node.frontmatter.label ? node.frontmatter.label : node.frontmatter.title}</Link>
-          ])) : []
+            ]))
+            : []
         }
       </div>, <CardTitle title={data.markdownRemark.frontmatter.title} key='title'/>];
   }
