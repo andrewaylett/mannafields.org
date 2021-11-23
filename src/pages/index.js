@@ -66,8 +66,10 @@ const Page = ({ data }) => (
     <Card>
       <CardText>
         <p>Located in central Edinburgh, Mannafields Christian School provides high quality
-                    primary and secondary education from a Christ-centred perspective.</p>
-        <p>We would love to welcome you to <a href="https://www.eventbrite.co.uk/e/mannafields-open-day-tickets-174790652547">our open day on Saturday 6th November, 2021</a>.  Due to the ongoing restrictions, we&apos;re asking people to <a
+          primary and secondary education from a Christ-centred perspective.</p>
+        <p>We would love to welcome you to <a
+          href="https://www.eventbrite.co.uk/e/mannafields-open-day-tickets-174790652547">our open day on Saturday 6th
+          November, 2021</a>. Due to the ongoing restrictions, we&apos;re asking people to <a
           href="https://www.eventbrite.co.uk/e/mannafields-open-day-tickets-174790652547">reserve
           a time online</a> so we can avoid crowding.</p>
       </CardText>
@@ -87,7 +89,7 @@ export default Page;
 export const query = graphql`
   query IndexImageSampleQuery {
       allImageSharp(
-         filter: { fields: { level: { eq: 1 } } }
+          filter: { fields: { level: { eq: 1 } } }
       ) {
           edges {
               node {
