@@ -11,7 +11,7 @@ We have indeed found Mannafields to be a secure, nurturing environment that back
 
 The small class sizes ensure that each child gets sufficient attention and the family atmosphere means that the children interact with each other regardless of age, gender or background. Although the school does not have the latest in material equipment, the children are getting a good education and are also maturing in character and faith.
 
- 
+
 ##Suzanne Simpson
 
 Hello, My name is Suzanne and I am a mum of three children, one who is of school age and attends Mannafields. My daughter is just about to start P5 and really looking forward to the new school year. She spent P1 and P2 in a state school around the corner from me and was very happy there. When her school year in P2 was coming to an end I heard about Mannafields through a friend at my Church. I immediately loved the idea of a Christian education as I was having concerns about the education she was receiving, and her behavior at school. As I said my daughter was very happy at school and learning at a great pace but it was some of the things she was learning that concerned me, and also the behavior and language she was learning from other children. I decided to talk to my daughter to see how she felt and she really loved the idea of attending a Christian school where she could be open about her faith without being worried about being picked on because of it, also in her words “I would love to learn about God at school”.

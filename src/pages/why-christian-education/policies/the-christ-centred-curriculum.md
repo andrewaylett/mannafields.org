@@ -26,7 +26,7 @@ Projects
 
 The cycle of projects is as shown below:
 
-|Year 1| 	Year 2| 	Year 3 
+|Year 1| 	Year 2| 	Year 3
 |------|----------|-----------
 |1. Creator|6. Provider, Resourceful| 11. Patience, Self-control
 |2. Light, Joy|7. Peace|12. Humble, Servant

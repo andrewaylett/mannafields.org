@@ -36,7 +36,7 @@ We aim that pupils, through gaining a wide knowledge of history, will:
  *   develop humility and compassion in seeing the undeserved gifts and deliverances of God, and wholesome fear because of His judgements.
  *   see the bible story, global history and their own lives as one continuing story and learn from it.
 
- 
+
 ### Principles in History
 
 The principles that we can see in scripture will form the foundation of our history teaching. Some of these are outlined below.

@@ -25,7 +25,7 @@ and so be part of spreading that knowledge. As Christian parents we are given ma
 
 Our Christian life involves our whole being and is not simply a spiritual practice, but also one that involves the mind
 
- > “Do not conform any longer to the pattern of this world, but be transformed by the renewing of your mind.” Romans 12:2 
+ > “Do not conform any longer to the pattern of this world, but be transformed by the renewing of your mind.” Romans 12:2
 
 As those seeking to give knowledge we must put Christ at the centre for it to be coherent and meaningful.
 

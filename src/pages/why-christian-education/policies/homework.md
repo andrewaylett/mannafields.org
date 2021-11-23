@@ -13,7 +13,7 @@ This statement, and the guidance it contains, should act as a general framework.
 
 In Mannafields, God has provided us with all the means to exercise this responsibility.  How much we need the renewing and transforming of our minds as the first step to being able to see with His eyes what He intends for our children!
 
- 
+
 ## Aims
 
 How can homework support parents, teachers and children in developing the aims of the school?
@@ -32,7 +32,7 @@ Children also have a responsibility towards their own development, which needs t
 
 Homework, as one part of the parent-teacher-pupil partnership, has an important role to play in this process.
 
- 
+
 ## Guidelines
 ### Parents
 
@@ -81,22 +81,22 @@ These tasks will generally follow the following pattern:
 During this time the development of reading skills is the main task: reading with parents, reading alone and learning sounds and words. Learning memory verses, songs and poems occasionally. Research at the level of asking parents about something.
 
 ####P3
-               
+
 Reading will continue to be of central importance. Thinking of words with particular sounds or letter blends will be frequent. Maths sheets and spelling homework will begin. Research at the level of asking parents about something. Learning memory verses weekly, and songs and poems occasionally.
 
-####P4               
+####P4
 
 Reading with parents continues to be important at this stage. Research tasks: simply to ask their parents about something, use of reference books will begin, and pupils will need considerable parental support in doing this. Learning memory verses weekly, and songs and poems occasionally. Maths and spelling weekly. Creative writing.
 
-####P5               
+####P5
 
 Reading with parents continues to be important at this stage. Learning memory verses, songs and poems occasionally. Research tasks will develop at this stage, with pupils being asked to present the researched information. Maths and spelling weekly. Creative writing.
 
-####P6               
+####P6
 
 Many pupils will begin to read more on their own for pleasure. This is an activity that should be encouraged without children feeling pressurised or that their privacy is being invaded. To do this, parents can help children to find access to books and discuss their own and their children’s reading. Hearing reading continues to be useful. Research tasks will continue with more writing being expected as a result. These should contain options to allow following of enthusiasms. Maths weekly, often in the context of research tasks. Learning memory verses weekly, and songs and poems occasionally. Spelling weekly. Creative writing.
 
-####P7               
+####P7
 
 Reading for pleasure. Parents should continue to encourage and help in finding more quality books that would be of interest. Researched writing should build up to extended pieces of writing using several sources. Sources may include personal experience, information  from other people as well as texts. Subjects for research should stem from pupils’ interests. Completion dates by negotiation. Maths weekly, often in the context of research tasks. Learning memory verses weekly, and songs and poems occasionally. Spelling weekly. Creative writing.
 
@@ -128,9 +128,8 @@ We will achieve this by:
 
 In P7, we envisage that homework will be more extensive and more regular, so that children will be prepared for the very different regime of the secondary school.
 
- 
+
 ## Conclusion
 
  >   “So let us consider how we may spur one another on towards love and good deeds…let us encourage one another …and all the more as we see the Day approaching.”\
    Hebrews 10 : 24, 25
-
