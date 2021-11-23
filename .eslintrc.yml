@@ -1,26 +1,27 @@
+---
 env:
   browser: true
   es6: true
   node: true
 extends:
-  - 'plugin:react/recommended'
-  - 'standard'
-  - 'semistandard'
+- plugin:react/recommended
+- standard
+- semistandard
 globals:
-  Atomics: 'readonly'
-  SharedArrayBuffer: 'readonly'
+  Atomics: readonly
+  SharedArrayBuffer: readonly
 parserOptions:
   ecmaFeatures:
     jsx: true
   impliedStrict: true
   ecmaVersion: 2018
-  sourceType: 'module'
+  sourceType: module
 plugins:
-  - 'react'
+- react
 rules: {}
 settings:
   react:
     version: detect
   linkComponents:
-    - name: Link
-      linkAttribute: to
+  - name: Link
+    linkAttribute: to

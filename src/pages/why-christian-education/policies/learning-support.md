@@ -14,7 +14,7 @@ In Mannafields we aim to:
  *   encourage appropriate excellence from each pupil
  *   enable each pupil to feel that they are a success
 
- 
+
 ## Introduction
 
 Most of our learning support is drawn from volunteers and parents. This means a wide range of training, abilities and time available. Given the wide range of roles that such people will take within the school the general term of helper will be used within this document. In order for there to be a coherent pattern of learning support there needs to be clear policy and co-ordination.

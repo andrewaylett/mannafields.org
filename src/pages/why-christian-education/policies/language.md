@@ -17,7 +17,7 @@ It is through language that he gives us his life:
 
 He has given us a language to use creatively:
 
- >   “In the tongue is the power of life and death” Proverbs 18v21 
+ >   “In the tongue is the power of life and death” Proverbs 18v21
 
 We have been chosen to:
 

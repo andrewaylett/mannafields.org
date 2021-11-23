@@ -3,7 +3,7 @@ title: Life Skills
 index: 8
 ---
 
- >   “Jesus grew in wisdom and stature, and in favour with God and men” Luke 2:52 
+ >   “Jesus grew in wisdom and stature, and in favour with God and men” Luke 2:52
 
 The aim of Christian education is that, with the help of the Holy Spirit, children should achieve this integrated lifestyle. As well as speaking about our individual and corporate relationship with God, the Bible also has a lot to say about our relationship with the world in which we live and how we should order our lives in this world. It is concerned with practical Christian living. Therefore, woven throughout the curriculum of a Christian School should be instruction in, and application of, Christian life-skills.
 
