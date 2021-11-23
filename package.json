@@ -29,7 +29,7 @@
     "gatsby-source-filesystem": "2.11.1",
     "gatsby-transformer-remark": "2.16.1",
     "gatsby-transformer-sharp": "2.12.1",
-    "mdi-react": "7.5.0",
+    "mdi-react": "8.2.0",
     "node-sass": "4.14.1",
     "prop-types": "15.7.2",
     "react": "17.0.2",
