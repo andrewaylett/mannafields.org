@@ -1,11 +1,10 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import Link from "gatsby-link";
+import Link from 'gatsby-link';
+import { Chip } from 'react-md/lib/Chips';
 
-import { Chip } from "react-md/lib/Chips";
-
-import cssModule from "./chips.module.scss";
+import cssModule from './chips.module.scss';
 
 export class ChipLink extends React.Component {
   render() {

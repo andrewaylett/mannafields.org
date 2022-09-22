@@ -1,15 +1,13 @@
-import React from "react";
-import Helmet from "react-helmet";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import PropTypes from "prop-types";
-
-import { graphql } from "gatsby";
-import Link from "gatsby-link";
-import Img from "gatsby-image";
-
-import { Card, CardTitle, CardText } from "react-md/lib/Cards";
-import { Grid, Cell } from "react-md/lib/Grids";
-import { Media, MediaOverlay } from "react-md/lib/Media";
+import Helmet from 'react-helmet';
+import { graphql } from 'gatsby';
+import Link from 'gatsby-link';
+import Img from 'gatsby-image';
+import { Card, CardTitle, CardText } from 'react-md/lib/Cards';
+import { Grid, Cell } from 'react-md/lib/Grids';
+import { Media, MediaOverlay } from 'react-md/lib/Media';
 
 function imageSizes(data, forPage) {
   for (const edge of data.allImageSharp.edges) {

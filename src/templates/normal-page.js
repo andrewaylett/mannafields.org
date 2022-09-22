@@ -1,29 +1,28 @@
-import React from "react";
-import Helmet from "react-helmet";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import { graphql } from "gatsby";
+import Helmet from 'react-helmet';
+import { graphql } from 'gatsby';
+import { Card, CardText, CardTitle } from 'react-md/lib/Cards';
+import { Grid, Cell } from 'react-md/lib/Grids';
+import { Avatar } from 'react-md/lib/Avatars';
+import { Media, MediaOverlay } from 'react-md/lib/Media';
+import Img from 'gatsby-image';
+import { MdArrowBack, MdArrowUpward, MdArrowForward } from 'react-icons/md';
+import Link from 'gatsby-link';
 
-import { Card, CardText, CardTitle } from "react-md/lib/Cards";
-import { Grid, Cell } from "react-md/lib/Grids";
-import { Avatar } from "react-md/lib/Avatars";
-import { ChipLink } from "../components/Chips";
-import { Media, MediaOverlay } from "react-md/lib/Media";
-import Img from "gatsby-image";
+import { ChipLink } from '../components/Chips';
 
-import { MdArrowBack, MdArrowUpward, MdArrowForward } from "react-icons/md";
-
-import module from "./normalpage.module.css";
-import Link from "gatsby-link";
+import module from './normalpage.module.css';
 
 function arrow(direction) {
-  if (direction === "back") {
+  if (direction === 'back') {
     return <MdArrowBack />;
   }
-  if (direction === "upward") {
+  if (direction === 'upward') {
     return <MdArrowUpward />;
   }
-  if (direction === "forward") {
+  if (direction === 'forward') {
     return <MdArrowForward />;
   }
 }
@@ -40,19 +39,19 @@ function maybeLink(node, direction) {
   }
 }
 
-function navigation({ prev, next, markdownRemark, parents }) {
+function navigation({ markdownRemark, next, parents, prev }) {
   if (markdownRemark.fields.level >= 3) {
     const parent = parents.edges[parents.edges.length - 1].node;
     return (
       <Grid>
         <Cell className={module.cell} size={4}>
-          {maybeLink(prev, "back")}
+          {maybeLink(prev, 'back')}
         </Cell>
         <Cell className={module.cell} size={4}>
-          {maybeLink(parent, "upward")}
+          {maybeLink(parent, 'upward')}
         </Cell>
         <Cell className={module.cell} size={4}>
-          {maybeLink(next, "forward")}
+          {maybeLink(next, 'forward')}
         </Cell>
       </Grid>
     );

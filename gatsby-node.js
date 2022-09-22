@@ -1,71 +1,72 @@
-const path = require("path");
-const { createFilePath } = require("gatsby-source-filesystem");
+const path = require('path');
 
-exports.onCreateNode = ({ node, getNode, actions }) => {
+const { createFilePath } = require('gatsby-source-filesystem');
+
+exports.onCreateNode = ({ actions, getNode, node }) => {
   const { createNodeField } = actions;
-  if (node.internal.type === "MarkdownRemark") {
-    const slug = createFilePath({ node, getNode, basePath: "pages" });
+  if (node.internal.type === 'MarkdownRemark') {
+    const slug = createFilePath({ node, getNode, basePath: 'pages' });
     const level = (slug.match(/\//g) || []).length - 1;
-    const parent = path.resolve(slug, "..");
+    const parent = path.resolve(slug, '..');
     const resolvedSlug = path.resolve(slug);
 
-    let str = "";
-    const componentArray = resolvedSlug.split("/");
+    let str = '';
+    const componentArray = resolvedSlug.split('/');
     componentArray.pop();
     componentArray
-      .map((x) => x + "\\/")
+      .map((x) => x + '\\/')
       .reverse()
       .forEach((elem) => {
-        str = "(" + elem + str + ")?";
+        str = '(' + elem + str + ')?';
       });
-    str = "/^" + str + "$/";
+    str = '/^' + str + '$/';
     console.log(str);
 
     createNodeField({
       node,
-      name: "parent_regex",
+      name: 'parent_regex',
       value: str,
     });
     createNodeField({
       node,
-      name: "slug",
+      name: 'slug',
       value: slug,
     });
     createNodeField({
       node,
-      name: "level",
+      name: 'level',
       value: level,
     });
     createNodeField({
       node,
-      name: "parent",
+      name: 'parent',
       value: parent,
     });
     createNodeField({
       node,
-      name: "resolved_slug",
+      name: 'resolved_slug',
       value: resolvedSlug,
     });
   }
 
-  if (node.internal.type === "ImageSharp") {
-    const slug = createFilePath({ node, getNode, basePath: "images/pages" });
+  if (node.internal.type === 'ImageSharp') {
+    const slug = createFilePath({ node, getNode, basePath: 'images/pages' });
     const level = (slug.match(/\//g) || []).length - 1;
-    const matchingPage = slug.replace(/\..*$/, "/");
+    const matchingPage = slug.replace(/\..*$/, '/');
     createNodeField({
       node,
-      name: "level",
+      name: 'level',
       value: level,
     });
     createNodeField({
       node,
-      name: "matching_page",
+      name: 'matching_page',
       value: matchingPage,
     });
   }
 };
 
-exports.createPages = async ({ graphql, actions }) => {
+exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions;
 
   const result = await graphql(`
@@ -105,15 +106,15 @@ exports.createPages = async ({ graphql, actions }) => {
   }, new Map());
 
   edges.forEach(({ node }) => {
-    const component = path.resolve("./src/templates/normal-page.js");
+    const component = path.resolve('./src/templates/normal-page.js');
     const context = {
       // Data passed to context is available in page queries as GraphQL variables.
       slug: node.fields.slug,
       level: node.fields.level,
       resolved_slug: node.fields.resolved_slug,
       parent_regex: node.fields.parent_regex,
-      next: node.next ? node.next : "",
-      prev: node.prev ? node.prev : "",
+      next: node.next ? node.next : '',
+      prev: node.prev ? node.prev : '',
     };
     console.log(context);
     createPage({

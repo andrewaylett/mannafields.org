@@ -1,30 +1,26 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import Helmet from "react-helmet";
+import Helmet from 'react-helmet';
+import { StaticQuery, graphql } from 'gatsby';
+import Link from 'gatsby-link';
+import Avatar from 'react-md/lib/Avatars';
+import TwitterIcon from 'mdi-react/TwitterIcon';
+import FacebookIcon from 'mdi-react/FacebookIcon';
+import { MdHome, MdSchool, MdPhone, MdEmail, MdMenu } from 'react-icons/md';
+import NavigationDrawer from 'react-md/lib/NavigationDrawers';
 
-import { StaticQuery, graphql } from "gatsby";
+import { ChipLink, ChipA } from '../components/Chips';
 
-import Link from "gatsby-link";
-import Avatar from "react-md/lib/Avatars";
-import TwitterIcon from "mdi-react/TwitterIcon";
-import FacebookIcon from "mdi-react/FacebookIcon";
+import module from './index.module.scss';
 
-import { MdHome, MdSchool, MdPhone, MdEmail, MdMenu } from "react-icons/md";
+import 'react-md/src/scss/_react-md.scss';
+import 'react-md/dist/react-md.blue-light_blue.min.css';
+import 'react-md/src/scss/_typography.scss';
 
-import NavigationDrawer from "react-md/lib/NavigationDrawers";
+import 'typeface-roboto';
 
-import module from "./index.module.scss";
-
-import "react-md/src/scss/_react-md.scss";
-import "react-md/dist/react-md.blue-light_blue.min.css";
-import "react-md/src/scss/_typography.scss";
-
-import "typeface-roboto";
-
-import "./main.css";
-
-import { ChipLink, ChipA } from "../components/Chips";
+import './main.css';
 
 class EmLink extends React.Component {
   render() {
@@ -39,10 +35,10 @@ class EmLink extends React.Component {
 function getNavList(query) {
   const result = [
     {
-      primaryText: "Home",
+      primaryText: 'Home',
       leftIcon: <MdHome className={module.home} />,
       component: Link,
-      to: "/",
+      to: '/',
     },
   ];
 
