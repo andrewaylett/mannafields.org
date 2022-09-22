@@ -7,10 +7,10 @@
     "url": "https://gitlab.com/mannafields/mf-website"
   },
   "scripts": {
-    "develop": "NODE_OPTIONS=--openssl-legacy-provider gatsby develop",
-    "build": "NODE_OPTIONS=--openssl-legacy-provider gatsby build",
-    "start": "NODE_OPTIONS=--openssl-legacy-provider gatsby develop",
-    "serve": "NODE_OPTIONS=--openssl-legacy-provider gatsby serve",
+    "develop": "gatsby develop",
+    "build": "gatsby build",
+    "start": "gatsby develop",
+    "serve": "gatsby serve",
     "lint": "eslint src *.js"
   },
   "dependencies": {
@@ -31,9 +31,9 @@
     "gatsby-transformer-sharp": "2.12.1",
     "mdi-react": "8.2.0",
     "prop-types": "15.8.1",
-    "react": "17.0.2",
+    "react": "^16",
     "react-burger-menu": "3.0.6",
-    "react-dom": "17.0.2",
+    "react-dom": "^16",
     "react-helmet": "6.1.0",
     "react-icons": "4.3.1",
     "react-md": "1.18.1",
