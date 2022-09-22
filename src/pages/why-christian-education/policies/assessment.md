@@ -3,7 +3,7 @@ title: Assessment
 index: 10
 ---
 
- >   “For by the grace given me I say to every one of you: Do not think of yourself more highly than you ought, but rather think of yourself with sober judgement, in accordance with the measure of faith God has given you. 4 Just as each of us has one body with many members, and these members do not all have the same function, 5 so in Christ we who are many form one body, and each member belongs to all the others. 6 We have different gifts, according to the grace given us.” Romans 12:3
+> “For by the grace given me I say to every one of you: Do not think of yourself more highly than you ought, but rather think of yourself with sober judgement, in accordance with the measure of faith God has given you. 4 Just as each of us has one body with many members, and these members do not all have the same function, 5 so in Christ we who are many form one body, and each member belongs to all the others. 6 We have different gifts, according to the grace given us.” Romans 12:3
 
 Each child is precious and has different gifts. We need to try to discern this gifting so that it can be brought to fruition and pupils gain ability to know and function in their strengths. As pupils see their own progress and are encouraged in it they can be spurred on to excellence. Parents are the prime motivators, educators and prayer support of their children. They need information on school progress to enable them to function effectively in this role.
 
@@ -31,12 +31,12 @@ Recording should be focused to have a specific aim. Records are only purposeful 
 
 To achieve meaningful recording:
 
- *   Blank record sheets with pupils’ names will be produced. One blank copy should be kept as a master to make copies from.
- *   Divided A4 ring binders will be used for class records. Some of the things that may usefully be recorded are: mental arithmetic tests, spelling tests, progress through computer schemes, homework returned, games skills, memory verses, listening skills, speaking skills and project tests.
- *   Recording frequency should be planned for each record sheet.
- *   Clear criteria and recording codes should be used.
- *   Learning support forms have been produced. These should be used to make up a folder with a division for each pupil in the class. Learning support teachers should record all that they do with pupils.
- *   A separate folder of records for maths with a division for each pupil will be used to record progress and will include check up tests. Progress should be recorded at least weekly. Reinforcement should follow in areas showing need on the check up tests.
+- Blank record sheets with pupils’ names will be produced. One blank copy should be kept as a master to make copies from.
+- Divided A4 ring binders will be used for class records. Some of the things that may usefully be recorded are: mental arithmetic tests, spelling tests, progress through computer schemes, homework returned, games skills, memory verses, listening skills, speaking skills and project tests.
+- Recording frequency should be planned for each record sheet.
+- Clear criteria and recording codes should be used.
+- Learning support forms have been produced. These should be used to make up a folder with a division for each pupil in the class. Learning support teachers should record all that they do with pupils.
+- A separate folder of records for maths with a division for each pupil will be used to record progress and will include check up tests. Progress should be recorded at least weekly. Reinforcement should follow in areas showing need on the check up tests.
 
 ## Reporting
 
@@ -44,19 +44,19 @@ The basis of parent controlled education is that God has given the primary respo
 
 Responsibility for children’s behaviour is ultimately a parental one. Consequently the school expects unqualified support from parents in the maintenance of discipline. A letter regarding these issues is included as appendix 1 of this chapter.
 
-####    Home to School
+#### Home to School
 
 Teachers will be very pleased to have feedback on how the children are doing at school, the joys as well as the sorrows! Concerning the joys, it is good to know what has been appreciated and found helpful. As for the sorrows, the sooner these are tackled the better. The teachers will be very pleased to speak to parents on any matter which is affecting their children, but unless it is an emergency, not during normal teaching hours as this can interrupt the flow of work of the whole class. Parents should simply intimate to the teacher that they would like to talk something over and between them arrange a suitable time.
 
 Matters which parents feel cannot be raised with the teachers themselves should be referred to one of the Governors. As a matter of principle, wherever there are a difficulties of any sort, parents should first and foremost make them a matter of prayer, and then to go through the channels outlined above and resist the temptation to discuss first with people not directly involved.
 
-####    Effort and Application Record
+#### Effort and Application Record
 
 On a regular basis an Effort and Application Record Sheet, as included in appendix 2 of this chapter, will be filled in for every pupil. This will be sent home to be signed, and may have a comment added if wished.
 
 To make the system workable for busy teachers the gradings of the record are broad and somewhat subjective. For much of the time the record should serve to reassure parents of their children’s effective learning. When parents become concerned by the content of the record they should speak to the teacher to find out the precise nature of the problem. And when parents are looking to see an improvement in the record they should speak to the teacher to see what changes may have been happening that might be hidden by the broad categories of the record sheet.
 
-####    Merits and Demerits
+#### Merits and Demerits
 
 A merit will be given for things deserving special notice, such as work well done or a special act of kindness. This may be linked to the giving of stars, or some other reward. It may also be appropriate for parents to give some sort of reward at home.
 
@@ -66,7 +66,7 @@ Parents will be asked to sign against each demerit and to comment on it, either 
 
 The systems of the effort and application record and the merits and demerits are to enable communication, but they should not be the sum total of the communication.
 
-####    Report Cards
+#### Report Cards
 
 Twice annually report cards will be sent home for all pupils. Parent evening will follow shortly after the distribution of reports.
 
@@ -74,7 +74,7 @@ Staff should aim to encourage pupils towards greater effort by reporting what pu
 
 As well as focusing on the positive there is also a time to report areas of failure in work or attitude. These issues should not be skirted round but clearly stated.
 
-####    Other Avenues
+#### Other Avenues
 
 Informal conversations are often occasions when a lot of really valuable communication can take place. As well as contact in and around school, association meetings and prayer meetings are places where such communication can happen.
 
@@ -94,14 +94,14 @@ The following comments may seem obvious but they are just some ideas on supporti
 
 ####“What can we do?”
 
- * Don’t overlook the effectiveness of a quiet chat and encouragement to do better. This is usually the place to start.
- * Rewards have also been found very effective by many parents:
-   * It is best to look for small rewards that can be given often when seeking to change young children’s behaviour. It is amazing what children will do for a sticky star on a star chart, or a candle to light at their place at table, and the affirmation that goes with that.
-   * Older children are more able to look forward to a special treat, such as a visit to the ice-cream shop, or a larger reward. Parents do need to be careful in selecting something that can be offered promptly when success is achieved by the pupil and something that is not so important that they can bear to withhold it if success is not achieved.
- * A listening ear is often very effective. Children not doing their best at school may have a reason that may seem trivial to us but seem important to them. It is important to learn when to help your child in problem solving or give them advice or when just to listen and give the child the security of being understood.
- * Don’t underestimate the importance of prayer. So many problem can be solved with a simple word to our heavenly father. Often it is good to pray with our children about things that are affecting them.
- * God’s word is a lamp to our feet and a light to our paths. There is a time to share scriptures that encourage and exhort us. It might be good to memorise a particular scripture with your child and refer to it often.
- * There comes a time for discipline. It is usually when children seem to be failing to try to respond to encouragement or reward. It may be a small thing at first such as the warning of the removal of some privilege or treat, but whatever it is we must be true to our word. But be careful not to threaten things that you will not be prepared to carry through as soon as it is needed.
+- Don’t overlook the effectiveness of a quiet chat and encouragement to do better. This is usually the place to start.
+- Rewards have also been found very effective by many parents:
+  - It is best to look for small rewards that can be given often when seeking to change young children’s behaviour. It is amazing what children will do for a sticky star on a star chart, or a candle to light at their place at table, and the affirmation that goes with that.
+  - Older children are more able to look forward to a special treat, such as a visit to the ice-cream shop, or a larger reward. Parents do need to be careful in selecting something that can be offered promptly when success is achieved by the pupil and something that is not so important that they can bear to withhold it if success is not achieved.
+- A listening ear is often very effective. Children not doing their best at school may have a reason that may seem trivial to us but seem important to them. It is important to learn when to help your child in problem solving or give them advice or when just to listen and give the child the security of being understood.
+- Don’t underestimate the importance of prayer. So many problem can be solved with a simple word to our heavenly father. Often it is good to pray with our children about things that are affecting them.
+- God’s word is a lamp to our feet and a light to our paths. There is a time to share scriptures that encourage and exhort us. It might be good to memorise a particular scripture with your child and refer to it often.
+- There comes a time for discipline. It is usually when children seem to be failing to try to respond to encouragement or reward. It may be a small thing at first such as the warning of the removal of some privilege or treat, but whatever it is we must be true to our word. But be careful not to threaten things that you will not be prepared to carry through as soon as it is needed.
 
 ####Merits and Demerits
 

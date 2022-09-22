@@ -26,11 +26,11 @@ Please contact us for account details.
 
 If you wish to donate by cheque, please make your cheque payable to Mannafields Christian Education Association and send it to:
 
- >   The Treasurer of MCEA,\
- >   M Surtees,\
- >   3 Shorthope Street,\
- >   Musselburgh,\
- >   EH21 7DB
+> The Treasurer of MCEA,\
+>  M Surtees,\
+>  3 Shorthope Street,\
+>  Musselburgh,\
+>  EH21 7DB
 
 ### Standing Order
 

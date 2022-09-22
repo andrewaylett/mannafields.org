@@ -5,12 +5,11 @@ index: 21
 
 ##Lizzie Aylett
 
-My older two children attend Mannafields and love the school.  We heard about the school through a friend, and initially were not very interested – we did not want to wrap our children in a nice Christian “bubble”, and wanted to be reaching out to society. However, the more we thought about it and discussed it with our friends, the more we realised that it is our responsibility as parents to be nurturing our children and training them up rather than thrusting them into schooling that is at best “multi-faith” and at worst God-hating.
+My older two children attend Mannafields and love the school. We heard about the school through a friend, and initially were not very interested – we did not want to wrap our children in a nice Christian “bubble”, and wanted to be reaching out to society. However, the more we thought about it and discussed it with our friends, the more we realised that it is our responsibility as parents to be nurturing our children and training them up rather than thrusting them into schooling that is at best “multi-faith” and at worst God-hating.
 
-We have indeed found Mannafields to be a secure, nurturing environment that backs up the teaching and morals we have at home.  It is in no way a bubble, but strives to prepare the children to live in the world for Christ. We appreciate the personal concern the teachers have for our children as individuals and the way they care for their needs yet push them to do their best and to honour God.  The example the teachers set is of the highest standard – and where else would you get the teachers praying for your child on a daily basis?
+We have indeed found Mannafields to be a secure, nurturing environment that backs up the teaching and morals we have at home. It is in no way a bubble, but strives to prepare the children to live in the world for Christ. We appreciate the personal concern the teachers have for our children as individuals and the way they care for their needs yet push them to do their best and to honour God. The example the teachers set is of the highest standard – and where else would you get the teachers praying for your child on a daily basis?
 
 The small class sizes ensure that each child gets sufficient attention and the family atmosphere means that the children interact with each other regardless of age, gender or background. Although the school does not have the latest in material equipment, the children are getting a good education and are also maturing in character and faith.
-
 
 ##Suzanne Simpson
 

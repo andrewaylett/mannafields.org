@@ -1,14 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-import module from './container.module.css';
+import module from "./container.module.css";
 
-const Container = ({ children }) => (
-  <div className={module.container}>{children}</div>
-);
+const Container = ({ children }) => <div className={module.container}>{children}</div>;
 
 Container.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 export default Container;

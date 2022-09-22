@@ -9,11 +9,10 @@ Scripture speaks of each member of the body of Christ being given a gifting or c
 We have in our classes children that are gifted, or will take up giftings, that will differ in character and scope. As children have different types of gifting they will have different styles of learning. We will not be able to teach the class as if they were all the same, nor can we ignore those with least gifting, as each has their special role.
 In Mannafields we aim to:
 
- *   value each pupil’s gifting and role in the school
- *   support teaching so that each child has work presented to them in a way that is intelligible and stretching
- *   encourage appropriate excellence from each pupil
- *   enable each pupil to feel that they are a success
-
+- value each pupil’s gifting and role in the school
+- support teaching so that each child has work presented to them in a way that is intelligible and stretching
+- encourage appropriate excellence from each pupil
+- enable each pupil to feel that they are a success
 
 ## Introduction
 
@@ -31,10 +30,10 @@ Teachers should plan helpers into the class work and give helpers a clear role w
 
 The class teacher is the first line learning support teacher. There is much that can be done within the class to assist those with learning support needs beside bringing in helpers. This can be by:
 
- *   giving differentiated work
- *   support through group collaborative learning
- *   extra time for tasks
- *   extra support materials (e.g. concrete materials in maths)
+- giving differentiated work
+- support through group collaborative learning
+- extra time for tasks
+- extra support materials (e.g. concrete materials in maths)
 
 ## The Parent’s Role
 
@@ -42,10 +41,10 @@ When pupils need extra support in their learning parents will often be able to b
 Parents’ help should be sought early, when a need is identified, rather than as a last option, or left only for parents’ evening consultation.
 Parents can give help with such things as
 
- *   learning letters, phonetics, tables and other memory tasks
- *   extra reading
- *   encouragement
- *   co-ordination exercises
+- learning letters, phonetics, tables and other memory tasks
+- extra reading
+- encouragement
+- co-ordination exercises
 
 ## Reporting to parents
 
@@ -58,16 +57,16 @@ It should be borne in mind that the reporting process is not usually a one way p
 It is vital for learning support to work effectively that the role of a helper is clearly identified. While flexibility may develop a clear starting point should be established.
 Learning support helpers will normally work by giving support with class work. This may be in one of many roles such as:
 
- *   an extra “teacher” to whom pupils can refer questions
- *   a helper with most of the class so that the teacher can take a group for specialised work
- *   a helper with a group needing extra support
- *   a helper with specific individuals within the class helping with such things as understanding questions in a comprehension task
+- an extra “teacher” to whom pupils can refer questions
+- a helper with most of the class so that the teacher can take a group for specialised work
+- a helper with a group needing extra support
+- a helper with specific individuals within the class helping with such things as understanding questions in a comprehension task
 
 While this will usually be within the classroom, pupils may perform class work in another area or classroom to provide a quiet setting with few distractions or to enable them to make more noise without distracting others.
 Extraction from the class work will sometimes be useful. This may mean doing different work within the same classroom, or in another space. This may be useful for:
 
- *   evaluation of the nature of learning support need
- *   re-teaching areas that pupils should have picked up in earlier years
+- evaluation of the nature of learning support need
+- re-teaching areas that pupils should have picked up in earlier years
 
 Helpers may also provide support by developing materials either to use themselves with pupils or for the teacher or other helper to use. Helpers may also help the teacher in planning and with ideas of approaches.
 
