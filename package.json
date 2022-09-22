@@ -30,7 +30,7 @@
     "gatsby-transformer-remark": "2.16.1",
     "gatsby-transformer-sharp": "2.12.1",
     "mdi-react": "8.2.0",
-    "node-sass": "4.14.1",
+    "node-sass": "7.0.3",
     "prop-types": "15.8.1",
     "react": "17.0.2",
     "react-burger-menu": "3.0.6",
