@@ -25,7 +25,7 @@ function mediaForPage(data, node) {
   if (sizes) {
     return (
       <Media>
-        <Img sizes={sizes} />
+        <Img fluid={sizes} />
         <MediaOverlay>
           <CardTitle title={text} />
         </MediaOverlay>
@@ -54,6 +54,18 @@ function cards(data) {
   return data.allMarkdownRemark.edges.map(({ node }) => cardForPage(data, node));
 }
 
+const openDay = () =>
+  Date.now() < new Date('2022-11-05') ? (
+    <>
+      <CardTitle title={'Open Day: 5th November 2022'} />
+      <CardText>
+        <p>Come and visit the school for our open day: 5th November 2022, 1-3pm in the school.</p>
+      </CardText>
+    </>
+  ) : (
+    []
+  );
+
 const Page = ({ data }) => (
   <div>
     <Helmet>
@@ -66,6 +78,7 @@ const Page = ({ data }) => (
           education from a Christ-centred perspective.
         </p>
       </CardText>
+      {openDay()}
     </Card>
     <Grid>{cards(data)}</Grid>
   </div>
