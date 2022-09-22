@@ -1,18 +1,17 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-import Link from 'gatsby-link';
+import Link from "gatsby-link";
 
-import { Chip } from 'react-md/lib/Chips';
+import { Chip } from "react-md/lib/Chips";
 
-import cssModule from './chips.module.scss';
+import cssModule from "./chips.module.scss";
 
 export class ChipLink extends React.Component {
-  render () {
+  render() {
     return (
       <Link to={this.props.to} className={cssModule.chip}>
-        <Chip label={this.props.label}
-          avatar={this.props.avatar}/>
+        <Chip label={this.props.label} avatar={this.props.avatar} />
       </Link>
     );
   }
@@ -21,15 +20,14 @@ export class ChipLink extends React.Component {
 ChipLink.propTypes = {
   to: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
-  avatar: PropTypes.node.isRequired
+  avatar: PropTypes.node.isRequired,
 };
 
 export class ChipA extends React.Component {
-  render () {
+  render() {
     return (
       <a href={this.props.to} className={cssModule.chip}>
-        <Chip label={this.props.label}
-          avatar={this.props.avatar}/>
+        <Chip label={this.props.label} avatar={this.props.avatar} />
       </a>
     );
   }
@@ -38,5 +36,5 @@ export class ChipA extends React.Component {
 ChipA.prototype.propTypes = {
   to: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
-  avatar: PropTypes.node.isRequired
+  avatar: PropTypes.node.isRequired,
 };

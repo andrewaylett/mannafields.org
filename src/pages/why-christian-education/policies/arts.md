@@ -7,19 +7,19 @@ index: 6
 
 Creativity is of the essence of God. The first words of scripture are
 
- >   “In the beginning God created …” Genesis 1:1
+> “In the beginning God created …” Genesis 1:1
 
 and we see this creativity continuing through time and through scripture. In Christ we are new creations, liberated from our old self-centred natures (2 Corinthians 5:17) and when He returns He will bring a new heaven and earth (Revelation 21:1).
 
 We also find that our God is one who expresses Himself, in creation,
 
- >   “for since the creation of the world God’s invisible qualities – His eternal power and divine nature – have been clearly seen being understood from what has been made” Romans 1:20
+> “for since the creation of the world God’s invisible qualities – His eternal power and divine nature – have been clearly seen being understood from what has been made” Romans 1:20
 
 He also expresses Himself in scripture, in His becoming human to live amongst us, and now through His people and the continuing work of His Spirit.
 
 We see that this creative expression in not merely a functional thing, but we see the trees in the garden
 
- >   “were pleasing to the eye and good for food.” Genesis 2:9
+> “were pleasing to the eye and good for food.” Genesis 2:9
 
 ## The Human Response
 
@@ -33,7 +33,7 @@ God is, within himself, community, since he is Father, Son and Holy Spirit. He h
 
 Since our God is a God of love this puts limits on our human activities, and this extends into the arts. Many things are just not healthy for us such as listening to long pieces of depressing music or focusing on violent images. Since we are called to battle against the forces of evil there is a place for dealing with darker themes, but as a way of overcoming them. The Christian’s use of expressive arts will be one focusing on
 
- >   “love, joy, peace, patience, kindness, goodness, faithfulness, gentleness and self-control” Gal 5:22
+> “love, joy, peace, patience, kindness, goodness, faithfulness, gentleness and self-control” Gal 5:22
 
 ## In the Classroom
 
@@ -45,7 +45,7 @@ In all areas of the expressive arts pupils’ work should be valued and encourag
 
 We need to also be able to guide pupils into what is Godly. We need to encourage our pupils, to
 
- >   “whatever is true, whatever is noble, whatever is right, whatever is pure, whatever is lovely, whatever is admirable – if anything is excellent or praiseworthy – think about such things.” Philippians 4:8
+> “whatever is true, whatever is noble, whatever is right, whatever is pure, whatever is lovely, whatever is admirable – if anything is excellent or praiseworthy – think about such things.” Philippians 4:8
 
 Sometimes, however we also need to recognise particular expressions are an important working through of difficult or painful issues.
 

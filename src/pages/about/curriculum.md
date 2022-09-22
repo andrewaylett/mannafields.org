@@ -11,15 +11,15 @@ Teaching is in line with the government’s ‘Curriculum for Excellence’, ens
 
 It embraces:
 
-*    Language
-*    Maths
-*    Environment and Social Studies
-*    Science and Technology
-*    Computing and Information Technology
-*    Craft and Artistic Work
-*    Music and Drama
-*    Outdoor and Physical Education activities
-*    French
+- Language
+- Maths
+- Environment and Social Studies
+- Science and Technology
+- Computing and Information Technology
+- Craft and Artistic Work
+- Music and Drama
+- Outdoor and Physical Education activities
+- French
 
 The school makes use of recognised learning programmes, modern audio-visual facilities, schools’ broadcasts and computer-aided learning, together with visits to places of interest which complement project-based work.
 

@@ -5,11 +5,11 @@ index: 2
 
 The Christian sees God revealing Himself to man in creation as Romans 1v20 says,
 
- > “since the creation of the world God’s invisible qualities – His eternal power and divine nature – have been clearly seen, being understood from what has been made.”
+> “since the creation of the world God’s invisible qualities – His eternal power and divine nature – have been clearly seen, being understood from what has been made.”
 
 To understand the world then we need to see it as an expression of who He is. In addition, we see Christ in everything as the unifying force in all of creation, as Colossians 1v17 puts it
 
- > “in Him all things hold together.”
+> “in Him all things hold together.”
 
 It is as if in Him we put all the pieces of the jigsaw together and the collection of random pieces suddenly becomes a meaningful whole, and so makes it so much easier to study and remember.
 Studying then becomes more than a gathering of useful or less useful facts, but an exploration of our closest friend who is there in every aspect of life. Laying out the world in this way enables children to develop a coherent world view that relates together: study, family life, morals, employment, friendship, worship and every area of life.
@@ -26,10 +26,10 @@ Projects
 
 The cycle of projects is as shown below:
 
-|Year 1| 	Year 2| 	Year 3
-|------|----------|-----------
-|1. Creator|6. Provider, Resourceful| 11. Patience, Self-control
-|2. Light, Joy|7. Peace|12. Humble, Servant
-|3. Faithful, Personal|8. Holy, Lord, King|13. Healer, Preserver
-|4. Love, Father|9. Shepherd|14. Truth, Justice, Mercy
-|5.Truth, Wisdom|10. Protector|15. Kindness, Gentleness
+| Year 1                | Year 2                   | Year 3                     |
+| --------------------- | ------------------------ | -------------------------- |
+| 1. Creator            | 6. Provider, Resourceful | 11. Patience, Self-control |
+| 2. Light, Joy         | 7. Peace                 | 12. Humble, Servant        |
+| 3. Faithful, Personal | 8. Holy, Lord, King      | 13. Healer, Preserver      |
+| 4. Love, Father       | 9. Shepherd              | 14. Truth, Justice, Mercy  |
+| 5.Truth, Wisdom       | 10. Protector            | 15. Kindness, Gentleness   |
