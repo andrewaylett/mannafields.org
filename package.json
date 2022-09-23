@@ -39,7 +39,7 @@
     "react-md": "1.18.1",
     "sass": "1.55.0",
     "typeface-roboto": "1.1.13",
-    "typescript": "4.5.5"
+    "typescript": "4.8.3"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "5.38.0",
