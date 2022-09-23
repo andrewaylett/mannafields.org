@@ -31,9 +31,9 @@
     "gatsby-transformer-sharp": "2.12.1",
     "mdi-react": "8.2.0",
     "prop-types": "15.8.1",
-    "react": "^16",
+    "react": "16.14.0",
     "react-burger-menu": "3.0.6",
-    "react-dom": "^16",
+    "react-dom": "16.14.0",
     "react-helmet": "6.1.0",
     "react-icons": "4.3.1",
     "react-md": "1.18.1",
@@ -49,8 +49,8 @@
     "source-map-explorer": "2.5.2"
   },
   "overrides": {
-    "react": "$react",
-    "react-dom": "$react-dom",
+    "react": "16.14.0",
+    "react-dom": "16.14.0",
     "core-js": "3.25.2",
     "sharp": "0.31.0",
     "sass-loader": "^7.0.0",
