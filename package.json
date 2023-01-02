@@ -45,7 +45,7 @@
     "@typescript-eslint/eslint-plugin": "5.47.1",
     "eslint": "8.31.0",
     "eslint-config-andrewaylett": "2.1.2",
-    "eslint-plugin-react": "7.28.0",
+    "eslint-plugin-react": "7.31.11",
     "source-map-explorer": "2.5.3"
   },
   "overrides": {
