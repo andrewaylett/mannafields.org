@@ -54,7 +54,7 @@
     "core-js": "3.27.1",
     "sharp": "0.31.3",
     "sass-loader": "7.3.1",
-    "node-sass": "npm:sass@1.25.0",
+    "node-sass": "npm:sass@1.57.1",
     "chokidar": "3.5.3"
   },
   "browserslist": [
