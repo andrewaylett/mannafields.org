@@ -9,4 +9,4 @@ An immeasurable sum has been given in kind: – books, equipment, computers, cla
 
 There are many individuals who give regularly or occasionally. There have also been increasing links with Dutch supporters and with local churches.
 
-Without such giving the school would not be able to operate as it does being open to all who seek Christian education. Anyone wishing to join these supporters should contact the treasurer, who can arrange tax-efficient gift aid for those qualifying. Please consider [donating to the School](/giving/donate/).
+Without such giving the school would not be able to operate as it does being open to all who seek Christian education. Anyone wishing to join these supporters should contact the treasurer, who can arrange tax-efficient gift aid for those qualifying. Please consider [donating to the School](https://www.give.net/20026282).
