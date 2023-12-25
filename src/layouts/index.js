@@ -49,7 +49,9 @@ function getNavList(query) {
       continue;
     }
     const pageDetails = {
-      primaryText: node.frontmatter.label ? node.frontmatter.label : node.frontmatter.title,
+      primaryText: node.frontmatter.label
+        ? node.frontmatter.label
+        : node.frontmatter.title,
       component: Link,
       to: node.fields.slug,
     };
@@ -71,7 +73,9 @@ const Layout = ({ children }) => {
           file {
             relativePath
           }
-          allMarkdownRemark(sort: { order: ASC, fields: [frontmatter___index] }) {
+          allMarkdownRemark(
+            sort: { order: ASC, fields: [frontmatter___index] }
+          ) {
             edges {
               node {
                 frontmatter {
@@ -105,8 +109,16 @@ const Layout = ({ children }) => {
             <div className={module.wrapper}>
               {children}
               <div className={module.main}>
-                <ChipLink to="/contact-us/" avatar={<Avatar icon={<MdSchool />} />} label="Contact Us" />
-                <ChipA to="tel:+441315163221" avatar={<Avatar icon={<MdPhone />} />} label="(+44) 131 516 3221" />
+                <ChipLink
+                  to="/contact-us/"
+                  avatar={<Avatar icon={<MdSchool />} />}
+                  label="Contact Us"
+                />
+                <ChipA
+                  to="tel:+441315163221"
+                  avatar={<Avatar icon={<MdPhone />} />}
+                  label="(+44) 131 516 3221"
+                />
                 <ChipA
                   to="mailto:info@mannafields.org"
                   avatar={<Avatar icon={<MdEmail />} />}
@@ -114,17 +126,22 @@ const Layout = ({ children }) => {
                 />
                 <ChipA
                   to="https://www.facebook.com/MannafieldsChristianSchool"
-                  avatar={<Avatar icon={<FacebookIcon className={module.icon} />} />}
+                  avatar={
+                    <Avatar icon={<FacebookIcon className={module.icon} />} />
+                  }
                   label="Facebook"
                 />
                 <ChipA
                   to="https://twitter.com/mannafields"
-                  avatar={<Avatar icon={<TwitterIcon className={module.icon} />} />}
+                  avatar={
+                    <Avatar icon={<TwitterIcon className={module.icon} />} />
+                  }
                   label="@mannafields"
                 />
               </div>
               <div className={module.bottom}>
-                Copyright &copy; 2004-2020 Mannafields Christian Education Association. Scottish Charity No. SC006202
+                Copyright &copy; 2004-2020 Mannafields Christian Education
+                Association. Scottish Charity No. SC006202
               </div>
             </div>
           </NavigationDrawer>

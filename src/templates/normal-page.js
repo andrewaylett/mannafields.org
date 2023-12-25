@@ -33,7 +33,11 @@ function maybeLink(node, direction) {
       <ChipLink
         to={node.fields.slug}
         avatar={<Avatar icon={arrow(direction)} />}
-        label={node.frontmatter.label ? node.frontmatter.label : node.frontmatter.title}
+        label={
+          node.frontmatter.label
+            ? node.frontmatter.label
+            : node.frontmatter.title
+        }
       />
     );
   }
@@ -68,7 +72,9 @@ function header(data) {
           {data.parents
             ? data.parents.edges.map(({ node }) => (
                 <Link to={node.fields.slug} key={node.fields.slug}>
-                  {node.frontmatter.label ? node.frontmatter.label : node.frontmatter.title}
+                  {node.frontmatter.label
+                    ? node.frontmatter.label
+                    : node.frontmatter.title}
                 </Link>
               ))
             : []}
@@ -86,7 +92,9 @@ function header(data) {
           ? data.parents.edges.map(({ node }) => [
               <span key="span"> &gt; </span>,
               <Link to={node.fields.slug} key={node.fields.slug}>
-                {node.frontmatter.label ? node.frontmatter.label : node.frontmatter.title}
+                {node.frontmatter.label
+                  ? node.frontmatter.label
+                  : node.frontmatter.title}
               </Link>,
             ])
           : []}
@@ -99,9 +107,19 @@ function header(data) {
 function getNavList(query) {
   const edges = query.allMarkdownRemark ? query.allMarkdownRemark.edges : [];
   return edges.map(({ node }) => (
-    <Link to={node.fields.slug} className={Cell.getClassName({ size: 4 })} key={node.fields.slug}>
+    <Link
+      to={node.fields.slug}
+      className={Cell.getClassName({ size: 4 })}
+      key={node.fields.slug}
+    >
       <Card className={module.card_link}>
-        <CardTitle title={node.frontmatter.label ? node.frontmatter.label : node.frontmatter.title} />
+        <CardTitle
+          title={
+            node.frontmatter.label
+              ? node.frontmatter.label
+              : node.frontmatter.title
+          }
+        />
       </Card>
     </Link>
   ));
@@ -114,7 +132,10 @@ const NormalPage = ({ data }) => {
       <Card>
         <Helmet>
           <title>
-            {post.frontmatter.label ? post.frontmatter.label : post.frontmatter.title} | Mannafields Christian School
+            {post.frontmatter.label
+              ? post.frontmatter.label
+              : post.frontmatter.title}{' '}
+            | Mannafields Christian School
           </title>
         </Helmet>
         {header(data)}
@@ -147,7 +168,13 @@ NormalPage.propTypes = {
 export default NormalPage;
 
 export const query = graphql`
-  query PageDataQuery($slug: String!, $resolved_slug: String!, $parent_regex: String!, $prev: String!, $next: String!) {
+  query PageDataQuery(
+    $slug: String!
+    $resolved_slug: String!
+    $parent_regex: String!
+    $prev: String!
+    $next: String!
+  ) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
@@ -206,7 +233,9 @@ export const query = graphql`
         }
       }
     }
-    parents: allMarkdownRemark(filter: { fields: { slug: { regex: $parent_regex } } }) {
+    parents: allMarkdownRemark(
+      filter: { fields: { slug: { regex: $parent_regex } } }
+    ) {
       edges {
         node {
           fields {
