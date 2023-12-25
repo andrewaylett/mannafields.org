@@ -20,7 +20,9 @@ function imageSizes(data, forPage) {
 }
 
 function mediaForPage(data, node) {
-  const text = node.frontmatter.label ? node.frontmatter.label : node.frontmatter.title;
+  const text = node.frontmatter.label
+    ? node.frontmatter.label
+    : node.frontmatter.title;
   const sizes = imageSizes(data, node.fields.slug);
   if (sizes) {
     return (
@@ -51,7 +53,9 @@ function cardForPage(data, node) {
 }
 
 function cards(data) {
-  return data.allMarkdownRemark.edges.map(({ node }) => cardForPage(data, node));
+  return data.allMarkdownRemark.edges.map(({ node }) =>
+    cardForPage(data, node),
+  );
 }
 
 const openDay = () =>
@@ -59,7 +63,10 @@ const openDay = () =>
     <>
       <CardTitle title={'Open Day: 5th November 2022'} />
       <CardText>
-        <p>Come and visit the school for our open day: 5th November 2022, 1-3pm in the school.</p>
+        <p>
+          Come and visit the school for our open day: 5th November 2022, 1-3pm
+          in the school.
+        </p>
       </CardText>
     </>
   ) : (
@@ -74,8 +81,9 @@ const Page = ({ data }) => (
     <Card>
       <CardText>
         <p>
-          Located in central Edinburgh, Mannafields Christian School provides high quality primary and secondary
-          education from a Christ-centred perspective.
+          Located in central Edinburgh, Mannafields Christian School provides
+          high quality primary and secondary education from a Christ-centred
+          perspective.
         </p>
       </CardText>
       {openDay()}
@@ -106,7 +114,10 @@ export const query = graphql`
         }
       }
     }
-    allMarkdownRemark(filter: { fields: { level: { eq: 1 } } }, sort: { order: ASC, fields: [frontmatter___index] }) {
+    allMarkdownRemark(
+      filter: { fields: { level: { eq: 1 } } }
+      sort: { order: ASC, fields: [frontmatter___index] }
+    ) {
       edges {
         node {
           frontmatter {
