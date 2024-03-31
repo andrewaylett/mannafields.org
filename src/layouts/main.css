@@ -1,6 +1,5 @@
 body {
-  background: rgb(87, 127, 152) url(../images/glossy-light-blue.png) no-repeat
-    fixed top;
+  background: rgb(87, 127, 152) url(../images/glossy-light-blue.png) no-repeat fixed top;
   margin: 0;
   padding: 0;
 }

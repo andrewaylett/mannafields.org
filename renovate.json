@@ -4,5 +4,11 @@
     "config:js-app",
     "github>andrewaylett/renovate-config",
     ":assignAndReview(andrewaylett)"
+  ],
+  "packageRules": [
+    {
+      "matchPackageNames": ["node"],
+      "allowedVersions": "^20"
+    }
   ]
 }
