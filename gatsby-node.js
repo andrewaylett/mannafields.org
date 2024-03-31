@@ -124,3 +124,9 @@ exports.createPages = async ({ actions, graphql }) => {
     });
   });
 };
+
+// exports.onCreateWebpackConfig = ({ actions, getConfig }) => {
+//   const config = getConfig();
+//   config.output.hashFunction = 'sha256';
+//   actions.replaceWebpackConfig(config);
+// };
