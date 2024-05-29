@@ -52,7 +52,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "core-js": "3.37.1",
-    "sharp": "0.32.6",
+    "sharp": "0.33.4",
     "sass-loader": "7.3.1",
     "node-sass": "npm:sass@1.77.2",
     "chokidar": "3.6.0",
