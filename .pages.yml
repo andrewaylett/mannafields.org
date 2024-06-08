@@ -1,0 +1,22 @@
+content:
+- name: pages
+  label: Pages
+  type: collection
+  path: src/pages
+  subfolders: true
+  fields:
+  - name: title
+    type: string
+  - name: label
+    type: string
+  - name: index
+    type: number
+  - name: icon
+    type: string
+  - name: body
+    type: rich-text
+media:
+  input: src/images
+  output: images
+  categories:
+  - image
