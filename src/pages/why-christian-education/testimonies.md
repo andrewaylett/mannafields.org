@@ -3,6 +3,16 @@ title: Testimonies
 index: 21
 ---
 
+##Twinkle Koh
+
+Enrolling my children at Mannafields has been one of the best decisions we’ve made since moving to Scotland from Singapore. They have experienced many transitions, and one of my biggest concerns was that my older child – who is quite reserved and shy – might feel overwhelmed in a new school environment. However, since joining Mannafields, I have seen him blossom – he has grown in confidence and now navigates different environments beyond home and family with greater ease.
+
+Both my children love school – their friends, teachers, and everything they are learning. They come home every day eager to share positive stories about their day. I have also been deeply impressed by the curriculum, which is diverse, academically rigorous, has real-world relevance, age-appropriate, and tailored to each child’s progress. Most importantly, it is values-driven – my children will especially recount to me stories they have learnt in school and the morals in those narratives.
+
+A special mention must go to the incredible teachers at Mannafields. Their dedication and love for the children are evident in the nurturing care they provide. Each child is truly seen, known, and cherished. I believe that the strong, positive relationships between teachers and students create a safe and supportive environment where every child can thrive.
+
+March 2025
+
 ##Lizzie Aylett
 
 My older two children attend Mannafields and love the school. We heard about the school through a friend, and initially were not very interested – we did not want to wrap our children in a nice Christian “bubble”, and wanted to be reaching out to society. However, the more we thought about it and discussed it with our friends, the more we realised that it is our responsibility as parents to be nurturing our children and training them up rather than thrusting them into schooling that is at best “multi-faith” and at worst God-hating.
