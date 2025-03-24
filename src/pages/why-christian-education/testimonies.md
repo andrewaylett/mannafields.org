@@ -3,6 +3,39 @@ title: Testimonies
 index: 21
 ---
 
+##Philip Sced
+
+I joined Mannafields in 1988, the year it opened, and received my primary school education there. It
+would not be an exaggeration to say that, in many ways, it laid the foundation for the rest of my life.
+The encouragement I received in music, drama, arts and crafts, creative writing, and reading – where
+I enthusiastically worked through much of Roald Dahl’s work – shaped my interests in ways I could
+never have imagined at the time. Most significantly, my early exposure to German at Mannafields
+played a lasting role in guiding my academic and professional path towards foreign languages.
+
+The school’s greatest strength lies in its deeply rooted Christian ethos, which fosters
+mentoring relationships and genuine friendships among students and teachers. This ethos was
+embodied by Mr. Ackerman, my teacher from Primary 4 to 7, who exemplified joyfulness, patience,
+curiosity, and kindness. Having followed in his footsteps and become a teacher myself, I now
+recognize the ways in which his influence has borne fruit in my own interactions with students at the
+university where I teach.
+
+Another hallmark of Mannafields was the creativity of its teachers and administrators in
+planning field trips and extracurricular activities. Three stand out vividly in my memory, though there
+were many more: orienteering on the vast and beautiful grounds of Carberry Tower, sand sculpture
+on Gullane Beach, and log hut building at Glen Feshie. These experiences not only enriched my
+education but also instilled a deep love for exploration and the outdoors. Mannafields was also
+where I developed my passion for football — a sport I still play more than twenty years later.
+
+Looking back, I am deeply grateful for the formative years I spent at Mannafields. The
+combination of academic encouragement, creative opportunities, and a strong Christian foundation
+left an indelible mark on my life, shaping both my career and my personal values.
+
+Philip M. M. Sced (class of 1993)
+PhD candidate (English Literature) National Changhua University of Education, Taiwan
+MA (Chinese) Edin.
+
+March 2025
+
 ##Twinkle Koh
 
 Enrolling my children at Mannafields has been one of the best decisions we’ve made since moving to Scotland from Singapore. They have experienced many transitions, and one of my biggest concerns was that my older child – who is quite reserved and shy – might feel overwhelmed in a new school environment. However, since joining Mannafields, I have seen him blossom – he has grown in confidence and now navigates different environments beyond home and family with greater ease.
